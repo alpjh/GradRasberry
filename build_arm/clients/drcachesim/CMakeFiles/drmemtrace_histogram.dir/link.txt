@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdrmemtrace_histogram.a  CMakeFiles/drmemtrace_histogram.dir/tools/histogram.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdrmemtrace_histogram.a

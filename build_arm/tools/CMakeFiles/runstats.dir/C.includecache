@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyeongjun/workspace/backup/tools/runstats.c
+configure.h
+/home/hyeongjun/workspace/backup/tools/configure.h
+sys/types.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+assert.h
+-
+stdarg.h
+-
+stdio.h
+-
+sys/time.h
+-
+stdlib.h
+-
+string.h
+-
+signal.h
+-
+sys/resource.h
+-
+
+configure.h
+sys/types.h
+-
+

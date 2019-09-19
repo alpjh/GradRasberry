@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/libdrinjectlib.a  CMakeFiles/drinjectlib.dir/unix/injector.c.o CMakeFiles/drinjectlib.dir/config.c.o CMakeFiles/drinjectlib.dir/string.c.o CMakeFiles/drinjectlib.dir/io.c.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/libdrinjectlib.a
