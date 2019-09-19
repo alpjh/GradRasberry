@@ -124,9 +124,9 @@ void video_streaming(){
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char* argv[]){
 	
-//	takePicture();
+	//takePicture();
 	
-//	video_streaming();
+	//video_streaming();
 	
 	drmgr_init();
 	drsym_init(0);
