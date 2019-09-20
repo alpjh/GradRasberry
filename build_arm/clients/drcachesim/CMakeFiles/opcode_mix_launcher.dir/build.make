@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/depend.make
@@ -50,18 +50,18 @@ include clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/progress.make
 include clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/flags.make
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o: clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/flags.make
-clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tools/opcode_mix_launcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tools/opcode_mix_launcher.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tools/opcode_mix_launcher.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tools/opcode_mix_launcher.cpp
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hyeongjun/workspace/backup/clients/drcachesim/tools/opcode_mix_launcher.cpp > CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jaehyun/dynamorio/clients/drcachesim/tools/opcode_mix_launcher.cpp > CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.i
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hyeongjun/workspace/backup/clients/drcachesim/tools/opcode_mix_launcher.cpp -o CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jaehyun/dynamorio/clients/drcachesim/tools/opcode_mix_launcher.cpp -o CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.s
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o.requires
@@ -81,25 +81,25 @@ opcode_mix_launcher_EXTERNAL_OBJECTS =
 
 clients/bin32/opcode_mix_launcher: clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/tools/opcode_mix_launcher.cpp.o
 clients/bin32/opcode_mix_launcher: clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/build.make
-clients/bin32/opcode_mix_launcher: clients/lib32/debug/libdrmemtrace_analyzer.a
-clients/bin32/opcode_mix_launcher: clients/lib32/debug/libdrmemtrace_opcode_mix.a
-clients/bin32/opcode_mix_launcher: clients/lib32/debug/libdrmemtrace_raw2trace.a
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrcovlib_static.a
+clients/bin32/opcode_mix_launcher: clients/lib32/release/libdrmemtrace_analyzer.a
+clients/bin32/opcode_mix_launcher: clients/lib32/release/libdrmemtrace_opcode_mix.a
+clients/bin32/opcode_mix_launcher: clients/lib32/release/libdrmemtrace_raw2trace.a
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrcovlib_static.a
 clients/bin32/opcode_mix_launcher: lib32/libdrfrontendlib.a
-clients/bin32/opcode_mix_launcher: lib32/debug/libdynamorio_static.a
-clients/bin32/opcode_mix_launcher: clients/lib32/debug/libdirectory_iterator.a
+clients/bin32/opcode_mix_launcher: lib32/release/libdynamorio_static.a
+clients/bin32/opcode_mix_launcher: clients/lib32/release/libdirectory_iterator.a
 clients/bin32/opcode_mix_launcher: lib32/libdrfrontendlib.a
 clients/bin32/opcode_mix_launcher: /usr/arm-linux-gnueabihf/lib/libpthread.so
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrutil_static.a
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrx_static.a
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrreg_static.a
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrcontainers.a
-clients/bin32/opcode_mix_launcher: ext/lib32/debug/libdrmgr_static.a
-clients/bin32/opcode_mix_launcher: lib32/debug/libdynamorio.so
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrutil_static.a
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrx_static.a
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrreg_static.a
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrcontainers.a
+clients/bin32/opcode_mix_launcher: ext/lib32/release/libdrmgr_static.a
+clients/bin32/opcode_mix_launcher: lib32/release/libdynamorio.so
 clients/bin32/opcode_mix_launcher: lib32/libdrlibc.a
 clients/bin32/opcode_mix_launcher: clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin32/opcode_mix_launcher"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opcode_mix_launcher.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opcode_mix_launcher.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/build: clients/bin32/opcode_mix_launcher
@@ -109,10 +109,10 @@ clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/requires: clients/drcaches
 .PHONY : clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/requires
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/opcode_mix_launcher.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/opcode_mix_launcher.dir/cmake_clean.cmake
 .PHONY : clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/clean
 
 clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/clients/drcachesim /home/jaehyun/build_arm /home/jaehyun/build_arm/clients/drcachesim /home/jaehyun/build_arm/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/depend
 

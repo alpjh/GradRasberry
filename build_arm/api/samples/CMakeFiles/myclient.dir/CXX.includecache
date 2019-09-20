@@ -6,20 +6,26 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/myclient_cxx.cpp
+/home/jaehyun/dynamorio/api/samples/myclient_cxx.cpp
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 drmgr.h
-/home/hyeongjun/workspace/backup/api/samples/drmgr.h
+/home/jaehyun/dynamorio/api/samples/drmgr.h
 drwrap.h
-/home/hyeongjun/workspace/backup/api/samples/drwrap.h
+/home/jaehyun/dynamorio/api/samples/drwrap.h
 drsyms.h
-/home/hyeongjun/workspace/backup/api/samples/drsyms.h
+/home/jaehyun/dynamorio/api/samples/drsyms.h
 cstdio
 -
 iostream
 -
 string
+-
+sys/types.h
+-
+sys/wait.h
+-
+unistd.h
 -
 
 api/samples/../../ext/include/drext.h

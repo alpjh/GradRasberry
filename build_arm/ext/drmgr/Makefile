@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -104,7 +104,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/jaehyun/build_arm && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -114,7 +114,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hyeongjun/workspace/raspberrypi/build_arm/CPackSourceConfig.cmake
+	cd /home/jaehyun/build_arm && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/jaehyun/build_arm/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -133,14 +133,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drmgr/CMakeFiles/progress.marks
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles 0
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles /home/jaehyun/build_arm/ext/drmgr/CMakeFiles/progress.marks
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/clean
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/clean
 .PHONY : clean
 
 # The main clean target
@@ -149,22 +149,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/preinstall
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/preinstall
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ext/drmgr/CMakeFiles/drmgr.dir/rule:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/CMakeFiles/drmgr.dir/rule
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/CMakeFiles/drmgr.dir/rule
 .PHONY : ext/drmgr/CMakeFiles/drmgr.dir/rule
 
 # Convenience name for target.
@@ -173,12 +173,12 @@ drmgr: ext/drmgr/CMakeFiles/drmgr.dir/rule
 
 # fast build rule for target.
 drmgr/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/build
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/build
 .PHONY : drmgr/fast
 
 # Convenience name for target.
 ext/drmgr/CMakeFiles/drmgr_static.dir/rule:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/CMakeFiles/drmgr_static.dir/rule
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drmgr/CMakeFiles/drmgr_static.dir/rule
 .PHONY : ext/drmgr/CMakeFiles/drmgr_static.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ drmgr_static: ext/drmgr/CMakeFiles/drmgr_static.dir/rule
 
 # fast build rule for target.
 drmgr_static/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/build
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/build
 .PHONY : drmgr_static/fast
 
 drmgr.o: drmgr.c.o
@@ -195,8 +195,8 @@ drmgr.o: drmgr.c.o
 
 # target to build an object file
 drmgr.c.o:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.o
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.o
 .PHONY : drmgr.c.o
 
 drmgr.i: drmgr.c.i
@@ -204,8 +204,8 @@ drmgr.i: drmgr.c.i
 
 # target to preprocess a source file
 drmgr.c.i:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.i
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.i
 .PHONY : drmgr.c.i
 
 drmgr.s: drmgr.c.s
@@ -213,8 +213,8 @@ drmgr.s: drmgr.c.s
 
 # target to generate assembly for a file
 drmgr.c.s:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.s
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr.dir/build.make ext/drmgr/CMakeFiles/drmgr.dir/drmgr.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drmgr/CMakeFiles/drmgr_static.dir/build.make ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.s
 .PHONY : drmgr.c.s
 
 # Help Target
@@ -247,6 +247,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

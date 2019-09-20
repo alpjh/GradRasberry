@@ -40,8 +40,8 @@
 #define _CONFIGURE_H_ 1
 
 /* exposed options */
-#define INTERNAL
-#define DEBUG
+/* #undef INTERNAL */
+/* #undef DEBUG */
 #define DRSTATS_DEMO
 
 /* target */
@@ -86,8 +86,8 @@
 /* #undef RECORD_MEMQUERY */
 
 /* when packaging */
-#define VERSION_NUMBER 7.91.18122
-#define VERSION_COMMA_DELIMITED 7,91,18122
+#define VERSION_NUMBER 7.91.18052
+#define VERSION_COMMA_DELIMITED 7,91,18052
 #define VERSION_NUMBER_INTEGER 791
 #define OLDEST_COMPATIBLE_VERSION 791
 /* #undef BUILD_NUMBER */
@@ -98,7 +98,6 @@
 #define HAVE_FVISIBILITY
 #define HAVE_TYPELIMITS_CONTROL
 /* #undef ANNOTATIONS */
-/* #undef HAVE_RSEQ */
 
 /* typedef conflicts */
 /* #undef DR_DO_NOT_DEFINE_bool */

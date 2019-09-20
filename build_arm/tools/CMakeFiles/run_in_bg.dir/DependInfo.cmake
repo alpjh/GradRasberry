@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/hyeongjun/workspace/backup/tools/run_in_bg.c" "/home/hyeongjun/workspace/raspberrypi/build_arm/tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o"
+  "/home/jaehyun/dynamorio/tools/run_in_bg.c" "/home/jaehyun/build_arm/tools/CMakeFiles/run_in_bg.dir/run_in_bg.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -20,9 +20,9 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "."
-  "/home/hyeongjun/workspace/backup/libutil"
-  "/home/hyeongjun/workspace/backup/core"
-  "/home/hyeongjun/workspace/backup/core/lib"
+  "/home/jaehyun/dynamorio/libutil"
+  "/home/jaehyun/dynamorio/core"
+  "/home/jaehyun/dynamorio/core/lib"
   )
 set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

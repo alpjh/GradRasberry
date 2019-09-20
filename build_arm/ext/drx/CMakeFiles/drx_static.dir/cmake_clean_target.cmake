@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdrx_static.a"
+  "../lib32/release/libdrx_static.a"
 )

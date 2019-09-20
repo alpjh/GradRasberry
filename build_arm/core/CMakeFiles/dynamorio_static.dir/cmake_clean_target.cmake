@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdynamorio_static.a"
+  "../lib32/release/libdynamorio_static.a"
 )

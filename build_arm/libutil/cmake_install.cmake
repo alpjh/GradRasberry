@@ -1,8 +1,8 @@
-# Install script for directory: /home/hyeongjun/workspace/backup/libutil
+# Install script for directory: /home/jaehyun/dynamorio/libutil
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hyeongjun/workspace/backup/exports")
+  set(CMAKE_INSTALL_PREFIX "/home/jaehyun/dynamorio/exports")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,14 +33,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32" TYPE STATIC_LIBRARY FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/libdrconfiglib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32" TYPE STATIC_LIBRARY FILES "/home/jaehyun/build_arm/lib32/libdrconfiglib.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE STATIC_LIBRARY FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/libdrconfiglib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE STATIC_LIBRARY FILES "/home/jaehyun/build_arm/lib32/libdrconfiglib.a")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE STATIC_LIBRARY FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/libdrfrontendlib.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE STATIC_LIBRARY FILES "/home/jaehyun/build_arm/lib32/libdrfrontendlib.a")
 endif()
 

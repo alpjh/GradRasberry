@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/tools/runstats.c
+/home/jaehyun/dynamorio/tools/runstats.c
 configure.h
-/home/hyeongjun/workspace/backup/tools/configure.h
+/home/jaehyun/dynamorio/tools/configure.h
 sys/types.h
 -
 unistd.h

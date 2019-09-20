@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -104,7 +104,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/jaehyun/build_arm && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -114,7 +114,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hyeongjun/workspace/raspberrypi/build_arm/CPackSourceConfig.cmake
+	cd /home/jaehyun/build_arm && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/jaehyun/build_arm/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -133,14 +133,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drcovlib/CMakeFiles/progress.marks
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles 0
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles /home/jaehyun/build_arm/ext/drcovlib/CMakeFiles/progress.marks
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/clean
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/clean
 .PHONY : clean
 
 # The main clean target
@@ -149,22 +149,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/preinstall
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/preinstall
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ext/drcovlib/CMakeFiles/drcovlib.dir/rule:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/CMakeFiles/drcovlib.dir/rule
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/CMakeFiles/drcovlib.dir/rule
 .PHONY : ext/drcovlib/CMakeFiles/drcovlib.dir/rule
 
 # Convenience name for target.
@@ -173,12 +173,12 @@ drcovlib: ext/drcovlib/CMakeFiles/drcovlib.dir/rule
 
 # fast build rule for target.
 drcovlib/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/build
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/build
 .PHONY : drcovlib/fast
 
 # Convenience name for target.
 ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule
+	cd /home/jaehyun/build_arm && $(MAKE) -f CMakeFiles/Makefile2 ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule
 .PHONY : ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ drcovlib_static: ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule
 
 # fast build rule for target.
 drcovlib_static/fast:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/build
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/build
 .PHONY : drcovlib_static/fast
 
 drcovlib.o: drcovlib.c.o
@@ -195,8 +195,8 @@ drcovlib.o: drcovlib.c.o
 
 # target to build an object file
 drcovlib.c.o:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.o
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.o
 .PHONY : drcovlib.c.o
 
 drcovlib.i: drcovlib.c.i
@@ -204,8 +204,8 @@ drcovlib.i: drcovlib.c.i
 
 # target to preprocess a source file
 drcovlib.c.i:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.i
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.i
 .PHONY : drcovlib.c.i
 
 drcovlib.s: drcovlib.c.s
@@ -213,8 +213,8 @@ drcovlib.s: drcovlib.c.s
 
 # target to generate assembly for a file
 drcovlib.c.s:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.s
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/drcovlib.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/drcovlib.c.s
 .PHONY : drcovlib.c.s
 
 modules.o: modules.c.o
@@ -222,8 +222,8 @@ modules.o: modules.c.o
 
 # target to build an object file
 modules.c.o:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.o
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.o
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.o
 .PHONY : modules.c.o
 
 modules.i: modules.c.i
@@ -231,8 +231,8 @@ modules.i: modules.c.i
 
 # target to preprocess a source file
 modules.c.i:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.i
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.i
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.i
 .PHONY : modules.c.i
 
 modules.s: modules.c.s
@@ -240,8 +240,8 @@ modules.s: modules.c.s
 
 # target to generate assembly for a file
 modules.c.s:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.s
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib.dir/build.make ext/drcovlib/CMakeFiles/drcovlib.dir/modules.c.s
+	cd /home/jaehyun/build_arm && $(MAKE) -f ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make ext/drcovlib/CMakeFiles/drcovlib_static.dir/modules.c.s
 .PHONY : modules.c.s
 
 # Help Target
@@ -277,6 +277,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

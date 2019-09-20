@@ -244,16 +244,14 @@ typedef enum {
     FEATURE_FMA4 = 16 + 96,   /**< AMD FMA4 supported */
     FEATURE_TBM = 21 + 96,    /**< AMD Trailing Bit Manipulation supported */
     /* structured extended features returned in ebx */
-    FEATURE_FSGSBASE = 0 + 128,  /**< #OP_rdfsbase, etc. supported */
-    FEATURE_BMI1 = 3 + 128,      /**< BMI1 instructions supported */
-    FEATURE_HLE = 4 + 128,       /**< Hardware Lock Elision supported */
-    FEATURE_AVX2 = 5 + 128,      /**< AVX2 instructions supported */
-    FEATURE_BMI2 = 8 + 128,      /**< BMI2 instructions supported */
-    FEATURE_ERMSB = 9 + 128,     /**< Enhanced rep movsb/stosb supported */
-    FEATURE_INVPCID = 10 + 128,  /**< #OP_invpcid supported */
-    FEATURE_RTM = 11 + 128,      /**< Restricted Transactional Memory supported */
-    FEATURE_AVX512F = 16 + 128,  /**< AVX-512F instructions supported */
-    FEATURE_AVX512BW = 30 + 128, /**< AVX-512BW instructions supported */
+    FEATURE_FSGSBASE = 0 + 128, /**< #OP_rdfsbase, etc. supported */
+    FEATURE_BMI1 = 3 + 128,     /**< BMI1 instructions supported */
+    FEATURE_HLE = 4 + 128,      /**< Hardware Lock Elision supported */
+    FEATURE_AVX2 = 5 + 128,     /**< AVX2 instructions supported */
+    FEATURE_BMI2 = 8 + 128,     /**< BMI2 instructions supported */
+    FEATURE_ERMSB = 9 + 128,    /**< Enhanced rep movsb/stosb supported */
+    FEATURE_INVPCID = 10 + 128, /**< #OP_invpcid supported */
+    FEATURE_RTM = 11 + 128,     /**< Restricted Transactional Memory supported */
 } feature_bit_t;
 
 /**
@@ -377,7 +375,10 @@ proc_fpstate_save_size(void);
  * to optimize the number of saved registers in a context switch to avoid frequency
  * scaling (https://github.com/DynamoRIO/dynamorio/issues/3169).
  */
-/* PR 306394: for 32-bit xmm0-7 are caller-saved, and are touched by
+/* XXX i#1312: Implement lazy update mechanism and add a callback so clients
+ * can adjust for changes mid-run.
+ *
+ * PR 306394: for 32-bit xmm0-7 are caller-saved, and are touched by
  * libc routines invoked by DR in some Linux systems (xref i#139),
  * so they should be saved in 32-bit Linux.
  *
@@ -405,14 +406,6 @@ proc_num_simd_saved(void);
  */
 int
 proc_num_simd_registers(void);
-
-/**
- * Returns the number of AVX-512 mask registers. The number returned here depends on the
- * processor and OS feature bits on a given machine.
- *
- */
-int
-proc_num_opmask_registers(void);
 
 /**
  * Saves the floating point state into the buffer \p buf.
@@ -467,14 +460,6 @@ proc_restore_fpstate(byte *buf);
  */
 bool
 proc_avx_enabled(void);
-
-/**
- * Returns whether AVX-512 is enabled by both the processor and the OS.
- * Even if the processor supports AVX-512, if the OS does not enable AVX-512,
- * then AVX-512 instructions will fault.
- */
-bool
-proc_avx512_enabled(void);
 
 
 /**

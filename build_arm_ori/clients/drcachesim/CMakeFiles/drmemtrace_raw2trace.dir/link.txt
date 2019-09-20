@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdrmemtrace_raw2trace.a  CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdrmemtrace_raw2trace.a

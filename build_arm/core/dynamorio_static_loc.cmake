@@ -1,1 +1,1 @@
-set(dynamorio_static_loc "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/debug/libdynamorio_static.a")
+set(dynamorio_static_loc "/home/jaehyun/build_arm/lib32/release/libdynamorio_static.a")

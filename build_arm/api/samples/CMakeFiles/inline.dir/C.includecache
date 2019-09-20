@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/inline.c
+/home/jaehyun/dynamorio/api/samples/inline.c
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 drmgr.h
-/home/hyeongjun/workspace/backup/api/samples/drmgr.h
+/home/jaehyun/dynamorio/api/samples/drmgr.h
 hashtable.h
-/home/hyeongjun/workspace/backup/api/samples/hashtable.h
+/home/jaehyun/dynamorio/api/samples/hashtable.h
 string.h
 -
 

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/depend.make
@@ -50,18 +50,18 @@ include clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/progress.make
 include clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -E /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -E /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -S /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -S /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o.requires
@@ -73,18 +73,18 @@ clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o.pr
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o.provides.build: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace_directory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_2)
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace_directory.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace_directory.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace_directory.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -E /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace_directory.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -E /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace_directory.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -S /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/raw2trace_directory.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -S /home/jaehyun/dynamorio/clients/drcachesim/tracer/raw2trace_directory.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o.requires
@@ -96,18 +96,18 @@ clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_director
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o.provides.build: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_3)
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -E /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -E /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -S /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -S /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o.requires
@@ -119,18 +119,18 @@ clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o.provi
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o.provides.build: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_online.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_4)
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_online.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_online.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_online.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -E /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_online.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -E /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_online.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -S /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_online.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -std=c++11 -std=c++11 -S /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_online.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o.requires
@@ -142,18 +142,18 @@ clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o.provides.build: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_offline.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_5)
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_offline.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_offline.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_offline.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -E /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_offline.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -E /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_offline.cpp > CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -S /home/hyeongjun/workspace/backup/clients/drcachesim/tracer/instru_offline.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -Wno-psabi -mthumb -std=c++11 -std=c++11 -S /home/jaehyun/dynamorio/clients/drcachesim/tracer/instru_offline.cpp -o CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o.requires
@@ -175,19 +175,19 @@ drmemtrace_raw2trace_OBJECTS = \
 # External object files for target drmemtrace_raw2trace
 drmemtrace_raw2trace_EXTERNAL_OBJECTS =
 
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build.make
-clients/lib32/debug/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../lib32/debug/libdrmemtrace_raw2trace.a"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_raw2trace.dir/cmake_clean_target.cmake
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drmemtrace_raw2trace.dir/link.txt --verbose=$(VERBOSE)
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace_directory.cpp.o
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru.cpp.o
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_online.cpp.o
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/instru_offline.cpp.o
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build.make
+clients/lib32/release/libdrmemtrace_raw2trace.a: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../lib32/release/libdrmemtrace_raw2trace.a"
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_raw2trace.dir/cmake_clean_target.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drmemtrace_raw2trace.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build: clients/lib32/debug/libdrmemtrace_raw2trace.a
+clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build: clients/lib32/release/libdrmemtrace_raw2trace.a
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/requires: clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/tracer/raw2trace.cpp.o.requires
@@ -198,10 +198,10 @@ clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/requires: clients/drcache
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/requires
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_raw2trace.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_raw2trace.dir/cmake_clean.cmake
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/clean
 
 clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/clients/drcachesim /home/jaehyun/build_arm /home/jaehyun/build_arm/clients/drcachesim /home/jaehyun/build_arm/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/depend
 

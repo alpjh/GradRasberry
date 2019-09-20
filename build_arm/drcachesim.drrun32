@@ -4,5 +4,4 @@ TOOL_OP=-dr
 TOOL_OP_DR_PATH
 TOOL_OP_DR_BUNDLE=-dr_ops
 TOOL_OP=-tracer
-CLIENT_REL=tools/lib32/debug/libdrmemtrace.so
-TOOL_OP=-dr_debug
+CLIENT_REL=tools/lib32/release/libdrmemtrace.so

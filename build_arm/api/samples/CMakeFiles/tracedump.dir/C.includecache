@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/tracedump.c
+/home/jaehyun/dynamorio/api/samples/tracedump.c
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 stdlib.h
 -
 assert.h

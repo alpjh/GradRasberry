@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/core/lib/c_defines.h
+/home/jaehyun/dynamorio/core/lib/c_defines.h
 
-/home/hyeongjun/workspace/backup/core/lib/globals_shared.h
+/home/jaehyun/dynamorio/core/lib/globals_shared.h
 windows.h
 -
 winbase.h
@@ -24,21 +24,21 @@ limits.h
 signal.h
 -
 c_defines.h
-/home/hyeongjun/workspace/backup/core/lib/c_defines.h
+/home/jaehyun/dynamorio/core/lib/c_defines.h
 sys/types.h
 -
 mcxtx.h
-/home/hyeongjun/workspace/backup/core/lib/mcxtx.h
+/home/jaehyun/dynamorio/core/lib/mcxtx.h
 mcxtx.h
-/home/hyeongjun/workspace/backup/core/lib/mcxtx.h
+/home/jaehyun/dynamorio/core/lib/mcxtx.h
 
-/home/hyeongjun/workspace/backup/core/lib/mcxtx.h
+/home/jaehyun/dynamorio/core/lib/mcxtx.h
 
-/home/hyeongjun/workspace/backup/tools/drloader.c
+/home/jaehyun/dynamorio/tools/drloader.c
 configure.h
-/home/hyeongjun/workspace/backup/tools/configure.h
+/home/jaehyun/dynamorio/tools/configure.h
 globals_shared.h
-/home/hyeongjun/workspace/backup/tools/globals_shared.h
+/home/jaehyun/dynamorio/tools/globals_shared.h
 errno.h
 -
 unistd.h

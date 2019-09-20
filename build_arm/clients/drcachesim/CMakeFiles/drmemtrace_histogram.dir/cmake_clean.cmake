@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drmemtrace_histogram.dir/tools/histogram.cpp.o"
-  "../lib32/debug/libdrmemtrace_histogram.pdb"
-  "../lib32/debug/libdrmemtrace_histogram.a"
+  "../lib32/release/libdrmemtrace_histogram.pdb"
+  "../lib32/release/libdrmemtrace_histogram.a"
 )
 
 # Per-language clean rules from dependency scanning.

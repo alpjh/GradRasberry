@@ -42,7 +42,7 @@ static void event_exit(){
 
 void wrap_pre(void *wrapcxt, OUT void **user_data){
 	dr_printf("Running wrap pre\n");
-	//video_streaming();
+	video_streaming();
 	//tmp();
 	pid_t pid = fork();
 	if(pid==0){

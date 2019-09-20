@@ -576,29 +576,29 @@ typedef union _dr_simd_t {
 
 #ifdef X64
 #    ifdef WINDOWS
-/* TODO i#1312: support AVX-512 extended registers. */
-/**< Number of [xyz]mm0-5 reg slots in dr_mcontext_t pre AVX-512 in-use. */
-#        define MCXT_NUM_SIMD_SSE_AVX_SLOTS 6
-/**< Number of [xyz]mm0-5 reg slots in dr_mcontext_t */
-#        define MCXT_NUM_SIMD_SLOTS 6
+/*xmm0-5*/
+#        define MCXT_NUM_SIMD_SLOTS \
+                6 /**< Number of [xy]mm reg slots in dr_mcontext_t */
 #    else
-/**< Number of [xyz]mm-15 reg slots in dr_mcontext_t pre AVX-512 in-use. */
-#        define MCXT_NUM_SIMD_SSE_AVX_SLOTS 16
-/**< Number of [xyz]mm0-31 reg slots in dr_mcontext_t */
-#        define MCXT_NUM_SIMD_SLOTS 32
+/*xmm0-15*/
+#        define MCXT_NUM_SIMD_SLOTS                             \
+                16 /**< Number of [xy]mm reg slots in dr_mcontext_t \
+                    */
 #    endif
-/**< Bytes of padding before simd dr_mcontext_t slots */
-#    define PRE_XMM_PADDING 48
+#    define PRE_XMM_PADDING \
+            48 /**< Bytes of padding before xmm/ymm dr_mcontext_t slots */
 #else
-/**< Number of [xyz]mm0-7 reg slots in dr_mcontext_t pre AVX-512 in-use. */
-#    define MCXT_NUM_SIMD_SSE_AVX_SLOTS 8
-/**< Number of [xyz]mm0-7 reg slots in dr_mcontext_t */
-#    define MCXT_NUM_SIMD_SLOTS 8
-/**< Bytes of padding before simd dr_mcontext_t slots */
-#    define PRE_XMM_PADDING 24
+/*xmm0-7*/
+#    define MCXT_NUM_SIMD_SLOTS                            \
+            8 /**< Number of [xy]mm reg slots in dr_mcontext_t \
+               */
+#    define PRE_XMM_PADDING \
+            24 /**< Bytes of padding before xmm/ymm dr_mcontext_t slots */
 #endif
-/**< Number of 16-64-bit OpMask Kn slots in dr_mcontext_t, if architecture supports. */
-#define MCXT_NUM_OPMASK_SLOTS 8
+#define MCXT_NUM_OPMASK_SLOTS                                    \
+        8 /**< Number of 16-64-bit OpMask Kn slots in dr_mcontext_t, \
+           * if architecture supports.                               \
+           */
 #else
 #error NYI
 #endif /* AARCHXX/X86 */
@@ -817,18 +817,12 @@ typedef struct _dr_mcontext_t {
          * Windows system calls.  These fields are ignored for 32-bit processes
          * that are not WOW64, or if the underlying processor does not support
          * SSE.  Use dr_mcontext_xmm_fields_valid() to determine whether the
-         * fields are valid. Use dr_mcontext_zmm_fields_valid() to determine
-         * whether zmm registers are preserved.
+         * fields are valid.
          *
-         * When the xmm fields are valid, on processors with AVX enabled (i.e.,
-         * proc_has_feature() with #FEATURE_AVX returns true), these fields will
+         * When the fields are valid, on processors with AVX enabled (i.e.,
+         * proc_has_feature(FEATURE_AVX) returns true), these fields will
          * contain the full ymm register values; otherwise, the top 128
          * bits of each slot will be undefined.
-         *
-         * When the zmm fields are valid, it implies that
-         * proc_has_feature() with #FEATURE_AVX512F is true. This is because DynamoRIO
-         * will not attempt to fill zmm fields w/o support by the processor and OS. The
-         * fields then will contain the full zmm register values.
          */
         dr_zmm_t simd[MCXT_NUM_SIMD_SLOTS];
         /**
@@ -837,8 +831,6 @@ typedef struct _dr_mcontext_t {
          */
         dr_zmm_t ymm[MCXT_NUM_SIMD_SLOTS];
     };
-    /** Storage for #MCXT_NUM_OPMASK_SLOTS mask registers as part of AVX-512. */
-    dr_opmask_t opmask[MCXT_NUM_OPMASK_SLOTS];
 #endif /* ARM/X86 */
 } dr_mcontext_t;
 

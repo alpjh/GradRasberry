@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include core/CMakeFiles/drpreload.dir/depend.make
@@ -50,18 +50,18 @@ include core/CMakeFiles/drpreload.dir/progress.make
 include core/CMakeFiles/drpreload.dir/flags.make
 
 core/CMakeFiles/drpreload.dir/unix/preload.c.o: core/CMakeFiles/drpreload.dir/flags.make
-core/CMakeFiles/drpreload.dir/unix/preload.c.o: /home/hyeongjun/workspace/backup/core/unix/preload.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+core/CMakeFiles/drpreload.dir/unix/preload.c.o: /home/jaehyun/dynamorio/core/unix/preload.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/unix/preload.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/unix/preload.c.o   -c /home/hyeongjun/workspace/backup/core/unix/preload.c
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/unix/preload.c.o   -c /home/jaehyun/dynamorio/core/unix/preload.c
 
 core/CMakeFiles/drpreload.dir/unix/preload.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/unix/preload.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/hyeongjun/workspace/backup/core/unix/preload.c > CMakeFiles/drpreload.dir/unix/preload.c.i
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/jaehyun/dynamorio/core/unix/preload.c > CMakeFiles/drpreload.dir/unix/preload.c.i
 
 core/CMakeFiles/drpreload.dir/unix/preload.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/unix/preload.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/hyeongjun/workspace/backup/core/unix/preload.c -o CMakeFiles/drpreload.dir/unix/preload.c.s
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/jaehyun/dynamorio/core/unix/preload.c -o CMakeFiles/drpreload.dir/unix/preload.c.s
 
 core/CMakeFiles/drpreload.dir/unix/preload.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/unix/preload.c.o.requires
@@ -73,18 +73,18 @@ core/CMakeFiles/drpreload.dir/unix/preload.c.o.provides: core/CMakeFiles/drprelo
 core/CMakeFiles/drpreload.dir/unix/preload.c.o.provides.build: core/CMakeFiles/drpreload.dir/unix/preload.c.o
 
 core/CMakeFiles/drpreload.dir/config.c.o: core/CMakeFiles/drpreload.dir/flags.make
-core/CMakeFiles/drpreload.dir/config.c.o: /home/hyeongjun/workspace/backup/core/config.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_2)
+core/CMakeFiles/drpreload.dir/config.c.o: /home/jaehyun/dynamorio/core/config.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/config.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/config.c.o   -c /home/hyeongjun/workspace/backup/core/config.c
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/config.c.o   -c /home/jaehyun/dynamorio/core/config.c
 
 core/CMakeFiles/drpreload.dir/config.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/config.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/hyeongjun/workspace/backup/core/config.c > CMakeFiles/drpreload.dir/config.c.i
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/jaehyun/dynamorio/core/config.c > CMakeFiles/drpreload.dir/config.c.i
 
 core/CMakeFiles/drpreload.dir/config.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/config.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/hyeongjun/workspace/backup/core/config.c -o CMakeFiles/drpreload.dir/config.c.s
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/jaehyun/dynamorio/core/config.c -o CMakeFiles/drpreload.dir/config.c.s
 
 core/CMakeFiles/drpreload.dir/config.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/config.c.o.requires
@@ -96,18 +96,18 @@ core/CMakeFiles/drpreload.dir/config.c.o.provides: core/CMakeFiles/drpreload.dir
 core/CMakeFiles/drpreload.dir/config.c.o.provides.build: core/CMakeFiles/drpreload.dir/config.c.o
 
 core/CMakeFiles/drpreload.dir/string.c.o: core/CMakeFiles/drpreload.dir/flags.make
-core/CMakeFiles/drpreload.dir/string.c.o: /home/hyeongjun/workspace/backup/core/string.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_3)
+core/CMakeFiles/drpreload.dir/string.c.o: /home/jaehyun/dynamorio/core/string.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/string.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/string.c.o   -c /home/hyeongjun/workspace/backup/core/string.c
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/string.c.o   -c /home/jaehyun/dynamorio/core/string.c
 
 core/CMakeFiles/drpreload.dir/string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/string.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/hyeongjun/workspace/backup/core/string.c > CMakeFiles/drpreload.dir/string.c.i
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/jaehyun/dynamorio/core/string.c > CMakeFiles/drpreload.dir/string.c.i
 
 core/CMakeFiles/drpreload.dir/string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/string.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/hyeongjun/workspace/backup/core/string.c -o CMakeFiles/drpreload.dir/string.c.s
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/jaehyun/dynamorio/core/string.c -o CMakeFiles/drpreload.dir/string.c.s
 
 core/CMakeFiles/drpreload.dir/string.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/string.c.o.requires
@@ -119,18 +119,18 @@ core/CMakeFiles/drpreload.dir/string.c.o.provides: core/CMakeFiles/drpreload.dir
 core/CMakeFiles/drpreload.dir/string.c.o.provides.build: core/CMakeFiles/drpreload.dir/string.c.o
 
 core/CMakeFiles/drpreload.dir/io.c.o: core/CMakeFiles/drpreload.dir/flags.make
-core/CMakeFiles/drpreload.dir/io.c.o: /home/hyeongjun/workspace/backup/core/io.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_4)
+core/CMakeFiles/drpreload.dir/io.c.o: /home/jaehyun/dynamorio/core/io.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object core/CMakeFiles/drpreload.dir/io.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/io.c.o   -c /home/hyeongjun/workspace/backup/core/io.c
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/drpreload.dir/io.c.o   -c /home/jaehyun/dynamorio/core/io.c
 
 core/CMakeFiles/drpreload.dir/io.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drpreload.dir/io.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/hyeongjun/workspace/backup/core/io.c > CMakeFiles/drpreload.dir/io.c.i
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -E /home/jaehyun/dynamorio/core/io.c > CMakeFiles/drpreload.dir/io.c.i
 
 core/CMakeFiles/drpreload.dir/io.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drpreload.dir/io.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/hyeongjun/workspace/backup/core/io.c -o CMakeFiles/drpreload.dir/io.c.s
+	cd /home/jaehyun/build_arm/core && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -S /home/jaehyun/dynamorio/core/io.c -o CMakeFiles/drpreload.dir/io.c.s
 
 core/CMakeFiles/drpreload.dir/io.c.o.requires:
 .PHONY : core/CMakeFiles/drpreload.dir/io.c.o.requires
@@ -151,19 +151,19 @@ drpreload_OBJECTS = \
 # External object files for target drpreload
 drpreload_EXTERNAL_OBJECTS =
 
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/unix/preload.c.o
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/config.c.o
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/string.c.o
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/io.c.o
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/build.make
-lib32/debug/libdrpreload.so: lib32/libdrlibc.a
-lib32/debug/libdrpreload.so: core/CMakeFiles/drpreload.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../lib32/debug/libdrpreload.so"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drpreload.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && /usr/bin/cmake -D lib_fileloc=/home/hyeongjun/workspace/raspberrypi/build_arm/core/drpreloadloc -D check_textrel=ON -D check_deps=OFF -D check_libc=ON -D check_interp=ON -D READELF_EXECUTABLE=/usr/bin/readelf -P /home/hyeongjun/workspace/backup/core/CMake_readelf.cmake
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/unix/preload.c.o
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/config.c.o
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/string.c.o
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/io.c.o
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/build.make
+lib32/release/libdrpreload.so: lib32/libdrlibc.a
+lib32/release/libdrpreload.so: core/CMakeFiles/drpreload.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../lib32/release/libdrpreload.so"
+	cd /home/jaehyun/build_arm/core && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drpreload.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/jaehyun/build_arm/core && /usr/bin/cmake -D lib_fileloc=/home/jaehyun/build_arm/core/drpreloadloc -D check_textrel=ON -D check_deps=OFF -D check_libc=ON -D check_interp=ON -D READELF_EXECUTABLE=/usr/bin/readelf -P /home/jaehyun/dynamorio/core/CMake_readelf.cmake
 
 # Rule to build all files generated by this target.
-core/CMakeFiles/drpreload.dir/build: lib32/debug/libdrpreload.so
+core/CMakeFiles/drpreload.dir/build: lib32/release/libdrpreload.so
 .PHONY : core/CMakeFiles/drpreload.dir/build
 
 core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/unix/preload.c.o.requires
@@ -173,10 +173,10 @@ core/CMakeFiles/drpreload.dir/requires: core/CMakeFiles/drpreload.dir/io.c.o.req
 .PHONY : core/CMakeFiles/drpreload.dir/requires
 
 core/CMakeFiles/drpreload.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/core && $(CMAKE_COMMAND) -P CMakeFiles/drpreload.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/core && $(CMAKE_COMMAND) -P CMakeFiles/drpreload.dir/cmake_clean.cmake
 .PHONY : core/CMakeFiles/drpreload.dir/clean
 
 core/CMakeFiles/drpreload.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/core /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/core /home/hyeongjun/workspace/raspberrypi/build_arm/core/CMakeFiles/drpreload.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/core /home/jaehyun/build_arm /home/jaehyun/build_arm/core /home/jaehyun/build_arm/core/CMakeFiles/drpreload.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : core/CMakeFiles/drpreload.dir/depend
 

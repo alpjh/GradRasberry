@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/depend.make
@@ -50,18 +50,18 @@ include clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/progress.mak
 include clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/flags.make
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/flags.make
-clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o: /home/hyeongjun/workspace/backup/clients/drcachesim/tools/reuse_distance.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o: /home/jaehyun/dynamorio/clients/drcachesim/tools/reuse_distance.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcachesim/tools/reuse_distance.cpp
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o -c /home/jaehyun/dynamorio/clients/drcachesim/tools/reuse_distance.cpp
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hyeongjun/workspace/backup/clients/drcachesim/tools/reuse_distance.cpp > CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/jaehyun/dynamorio/clients/drcachesim/tools/reuse_distance.cpp > CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.i
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hyeongjun/workspace/backup/clients/drcachesim/tools/reuse_distance.cpp -o CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/jaehyun/dynamorio/clients/drcachesim/tools/reuse_distance.cpp -o CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.s
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o.requires:
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o.requires
@@ -79,25 +79,25 @@ drmemtrace_reuse_distance_OBJECTS = \
 # External object files for target drmemtrace_reuse_distance
 drmemtrace_reuse_distance_EXTERNAL_OBJECTS =
 
-clients/lib32/debug/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o
-clients/lib32/debug/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/build.make
-clients/lib32/debug/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../lib32/debug/libdrmemtrace_reuse_distance.a"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_reuse_distance.dir/cmake_clean_target.cmake
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drmemtrace_reuse_distance.dir/link.txt --verbose=$(VERBOSE)
+clients/lib32/release/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o
+clients/lib32/release/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/build.make
+clients/lib32/release/libdrmemtrace_reuse_distance.a: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library ../lib32/release/libdrmemtrace_reuse_distance.a"
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_reuse_distance.dir/cmake_clean_target.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drmemtrace_reuse_distance.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/build: clients/lib32/debug/libdrmemtrace_reuse_distance.a
+clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/build: clients/lib32/release/libdrmemtrace_reuse_distance.a
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/build
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/requires: clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/tools/reuse_distance.cpp.o.requires
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/requires
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_reuse_distance.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drmemtrace_reuse_distance.dir/cmake_clean.cmake
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/clean
 
 clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/clients/drcachesim /home/jaehyun/build_arm /home/jaehyun/build_arm/clients/drcachesim /home/jaehyun/build_arm/clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/depend
 

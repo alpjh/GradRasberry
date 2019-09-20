@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdrmemtrace_view.a"
+  "../lib32/release/libdrmemtrace_view.a"
 )

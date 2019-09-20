@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdirectory_iterator.a  CMakeFiles/directory_iterator.dir/common/directory_iterator.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdirectory_iterator.a

@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/ext/drmgr/drmgr.c
+/home/jaehyun/dynamorio/ext/drmgr/drmgr.c
 dr_api.h
-/home/hyeongjun/workspace/backup/ext/drmgr/dr_api.h
+/home/jaehyun/dynamorio/ext/drmgr/dr_api.h
 drmgr.h
-/home/hyeongjun/workspace/backup/ext/drmgr/drmgr.h
+/home/jaehyun/dynamorio/ext/drmgr/drmgr.h
 ../ext_utils.h
-/home/hyeongjun/workspace/backup/ext/ext_utils.h
+/home/jaehyun/dynamorio/ext/ext_utils.h
 string.h
 -
 stddef.h
 -
 
-/home/hyeongjun/workspace/backup/ext/drmgr/drmgr.h
+/home/jaehyun/dynamorio/ext/drmgr/drmgr.h
 
-/home/hyeongjun/workspace/backup/ext/ext_utils.h
+/home/jaehyun/dynamorio/ext/ext_utils.h
 
 cmake/../include/dr_api.h
 dr_defines.h

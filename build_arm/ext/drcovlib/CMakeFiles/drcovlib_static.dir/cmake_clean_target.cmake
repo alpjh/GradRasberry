@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdrcovlib_static.a"
+  "../lib32/release/libdrcovlib_static.a"
 )

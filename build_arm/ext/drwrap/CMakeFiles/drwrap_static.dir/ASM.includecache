@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/ext/drwrap/drwrap_asm_arm.asm
+/home/jaehyun/dynamorio/ext/drwrap/drwrap_asm_arm.asm
 cpp2asm_defines.h
-/home/hyeongjun/workspace/backup/ext/drwrap/cpp2asm_defines.h
+/home/jaehyun/dynamorio/ext/drwrap/cpp2asm_defines.h
 
 cmake/cpp2asm_defines.h
 

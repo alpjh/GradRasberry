@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include clients/drcov/CMakeFiles/drcov2lcov.dir/depend.make
@@ -50,18 +50,18 @@ include clients/drcov/CMakeFiles/drcov2lcov.dir/progress.make
 include clients/drcov/CMakeFiles/drcov2lcov.dir/flags.make
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o: clients/drcov/CMakeFiles/drcov2lcov.dir/flags.make
-clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o: /home/hyeongjun/workspace/backup/clients/drcov/postprocess/drcov2lcov.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o: /home/jaehyun/dynamorio/clients/drcov/postprocess/drcov2lcov.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -o CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o -c /home/hyeongjun/workspace/backup/clients/drcov/postprocess/drcov2lcov.cpp
+	cd /home/jaehyun/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++   $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -o CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o -c /home/jaehyun/dynamorio/clients/drcov/postprocess/drcov2lcov.cpp
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -E /home/hyeongjun/workspace/backup/clients/drcov/postprocess/drcov2lcov.cpp > CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.i
+	cd /home/jaehyun/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -E /home/jaehyun/dynamorio/clients/drcov/postprocess/drcov2lcov.cpp > CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.i
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -S /home/hyeongjun/workspace/backup/clients/drcov/postprocess/drcov2lcov.cpp -o CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.s
+	cd /home/jaehyun/build_arm/clients/drcov && /usr/bin/arm-linux-gnueabihf-g++  $(CXX_DEFINES) $(CXX_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=c++11 -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -S /home/jaehyun/dynamorio/clients/drcov/postprocess/drcov2lcov.cpp -o CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.s
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o.requires:
 .PHONY : clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o.requires
@@ -81,23 +81,23 @@ drcov2lcov_EXTERNAL_OBJECTS =
 
 clients/bin32/drcov2lcov: clients/drcov/CMakeFiles/drcov2lcov.dir/postprocess/drcov2lcov.cpp.o
 clients/bin32/drcov2lcov: clients/drcov/CMakeFiles/drcov2lcov.dir/build.make
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrsyms_static.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrcontainers.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrcovlib_static.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrsyms_static.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrcontainers.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrcovlib_static.a
 clients/bin32/drcov2lcov: lib32/libdrfrontendlib.a
-clients/bin32/drcov2lcov: /home/hyeongjun/workspace/backup/ext/drsyms/libelftc-arm/lib32-eabihf/libdwarf.a
-clients/bin32/drcov2lcov: /home/hyeongjun/workspace/backup/ext/drsyms/libelftc-arm/lib32-eabihf/libelftc.a
-clients/bin32/drcov2lcov: /home/hyeongjun/workspace/backup/ext/drsyms/libelftc-arm/lib32-eabihf/libelf.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrx_static.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrreg_static.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrcontainers.a
-clients/bin32/drcov2lcov: ext/lib32/debug/libdrmgr_static.a
-clients/bin32/drcov2lcov: lib32/debug/libdynamorio.so
+clients/bin32/drcov2lcov: /home/jaehyun/dynamorio/ext/drsyms/libelftc-arm/lib32-eabihf/libdwarf.a
+clients/bin32/drcov2lcov: /home/jaehyun/dynamorio/ext/drsyms/libelftc-arm/lib32-eabihf/libelftc.a
+clients/bin32/drcov2lcov: /home/jaehyun/dynamorio/ext/drsyms/libelftc-arm/lib32-eabihf/libelf.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrx_static.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrreg_static.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrcontainers.a
+clients/bin32/drcov2lcov: ext/lib32/release/libdrmgr_static.a
+clients/bin32/drcov2lcov: lib32/release/libdynamorio.so
 clients/bin32/drcov2lcov: lib32/libdrlibc.a
 clients/bin32/drcov2lcov: clients/drcov/CMakeFiles/drcov2lcov.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable ../bin32/drcov2lcov"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drcov2lcov.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && /usr/bin/cmake -E echo "Make sure the loader finds the dynamorio library (set LD_LIBRARY_PATH)"
+	cd /home/jaehyun/build_arm/clients/drcov && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drcov2lcov.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/jaehyun/build_arm/clients/drcov && /usr/bin/cmake -E echo "Make sure the loader finds the dynamorio library (set LD_LIBRARY_PATH)"
 
 # Rule to build all files generated by this target.
 clients/drcov/CMakeFiles/drcov2lcov.dir/build: clients/bin32/drcov2lcov
@@ -107,10 +107,10 @@ clients/drcov/CMakeFiles/drcov2lcov.dir/requires: clients/drcov/CMakeFiles/drcov
 .PHONY : clients/drcov/CMakeFiles/drcov2lcov.dir/requires
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov && $(CMAKE_COMMAND) -P CMakeFiles/drcov2lcov.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/clients/drcov && $(CMAKE_COMMAND) -P CMakeFiles/drcov2lcov.dir/cmake_clean.cmake
 .PHONY : clients/drcov/CMakeFiles/drcov2lcov.dir/clean
 
 clients/drcov/CMakeFiles/drcov2lcov.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/clients/drcov /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcov/CMakeFiles/drcov2lcov.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/clients/drcov /home/jaehyun/build_arm /home/jaehyun/build_arm/clients/drcov /home/jaehyun/build_arm/clients/drcov/CMakeFiles/drcov2lcov.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : clients/drcov/CMakeFiles/drcov2lcov.dir/depend
 

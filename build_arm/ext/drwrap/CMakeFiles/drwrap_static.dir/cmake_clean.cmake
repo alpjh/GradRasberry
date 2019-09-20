@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drwrap_static.dir/drwrap.c.o"
   "CMakeFiles/drwrap_static.dir/drwrap_asm_arm.asm.o"
-  "../lib32/debug/libdrwrap_static.pdb"
-  "../lib32/debug/libdrwrap_static.a"
+  "../lib32/release/libdrwrap_static.pdb"
+  "../lib32/release/libdrwrap_static.a"
 )
 
 # Per-language clean rules from dependency scanning.

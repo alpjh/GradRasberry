@@ -12,7 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/drcachesim.dir/simulator/analyzer_interface.cpp.o"
   "CMakeFiles/drcachesim.dir/tracer/instru.cpp.o"
   "CMakeFiles/drcachesim.dir/tracer/instru_online.cpp.o"
-  "CMakeFiles/drcachesim.dir/tests/trace_invariants.cpp.o"
   "../bin32/drcachesim.pdb"
   "../bin32/drcachesim"
 )
