@@ -1,4 +1,9 @@
-#include <cstdio> 
+#include "opencv2/objdetect.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
+#include <iostream>
+
+include <cstdio> 
 void print_hello(){
     printf("hello\n");
 }
