@@ -1,11 +1,11 @@
-#include "opencv2/objdetect.hpp"
-#include "opencv2/highgui.hpp"
-#include "opencv2/imgproc.hpp"
+//#include "opencv2/objdetect.hpp"
+//#include "opencv2/highgui.hpp"
+//#include "opencv2/imgproc.hpp"
 #include <iostream>
 
-using namespace std;
-using namespace cv;
-
+//using namespace std;
+//using namespace cv;
+/*
 static void help()
 {
     cout << "\nThis program demonstrates the use of cv::CascadeClassifier class to detect objects (Face + eyes). You can use Haar or LBP features.\n"
@@ -29,7 +29,7 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
 
 string cascadeName;
 string nestedCascadeName;
-
+*/
 void print_hello(){
     printf("hello\n");
 }
@@ -41,8 +41,8 @@ int main( int argc, const char** argv )
 	printf("Before Call\n");    
 	print_hello();
     printf("After Call\n");
-
-
+}
+/*
 
 
 	printf("[Facedetect.cpp] start detect\n");
@@ -143,10 +143,10 @@ int main( int argc, const char** argv )
         }
         else if( !inputName.empty() )
         {
-			printf("[For Debuh]\n");
+			printf("[For Debuh]\n");*/
             /* assume it is a text file containing the
             list of the image filenames to be processed - one per line */
-            FILE* f = fopen( inputName.c_str(), "rt" );
+          /*  FILE* f = fopen( inputName.c_str(), "rt" );
             if( f )
             {
                 char buf[1000+1];
@@ -266,4 +266,4 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
         }
     }
     imshow( "result", img );
-}
+}*/
