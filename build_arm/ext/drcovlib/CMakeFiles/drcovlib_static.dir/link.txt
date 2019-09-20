@@ -1,2 +1,2 @@
-/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdrcovlib_static.a  CMakeFiles/drcovlib_static.dir/drcovlib.c.o CMakeFiles/drcovlib_static.dir/modules.c.o
-/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdrcovlib_static.a
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/release/libdrcovlib_static.a  CMakeFiles/drcovlib_static.dir/drcovlib.c.o CMakeFiles/drcovlib_static.dir/modules.c.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/release/libdrcovlib_static.a

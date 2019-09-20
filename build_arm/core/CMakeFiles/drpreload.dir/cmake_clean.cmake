@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drpreload.dir/config.c.o"
   "CMakeFiles/drpreload.dir/string.c.o"
   "CMakeFiles/drpreload.dir/io.c.o"
-  "../lib32/debug/libdrpreload.pdb"
-  "../lib32/debug/libdrpreload.so"
+  "../lib32/release/libdrpreload.pdb"
+  "../lib32/release/libdrpreload.so"
 )
 
 # Per-language clean rules from dependency scanning.

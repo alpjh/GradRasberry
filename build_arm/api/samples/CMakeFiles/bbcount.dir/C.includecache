@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/bbcount.c
+/home/jaehyun/dynamorio/api/samples/bbcount.c
 stddef.h
 -
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 drmgr.h
-/home/hyeongjun/workspace/backup/api/samples/drmgr.h
+/home/jaehyun/dynamorio/api/samples/drmgr.h
 drreg.h
-/home/hyeongjun/workspace/backup/api/samples/drreg.h
+/home/jaehyun/dynamorio/api/samples/drreg.h
 drx.h
-/home/hyeongjun/workspace/backup/api/samples/drx.h
+/home/jaehyun/dynamorio/api/samples/drx.h
 
 api/samples/../../ext/include/drmgr.h
 

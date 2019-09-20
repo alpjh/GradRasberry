@@ -3,11 +3,11 @@
 
 # compile ASM with /usr/bin/arm-linux-gnueabihf-as
 # compile C with /usr/bin/arm-linux-gnueabihf-gcc
-ASM_FLAGS = -g -I/home/hyeongjun/workspace/backup/core/drlibc -I/home/hyeongjun/workspace/backup/core/arch/arm -I/home/hyeongjun/workspace/backup/core/unix -I/home/hyeongjun/workspace/backup/core/arch -I/home/hyeongjun/workspace/backup/core/lib -I/home/hyeongjun/workspace/raspberrypi/build_arm -I/home/hyeongjun/workspace/backup/core/../third_party/libgcc/arm    -fPIC
+ASM_FLAGS = -O2 -g -DNDEBUG -I/home/jaehyun/dynamorio/core/drlibc -I/home/jaehyun/dynamorio/core/arch/arm -I/home/jaehyun/dynamorio/core/unix -I/home/jaehyun/dynamorio/core/arch -I/home/jaehyun/dynamorio/core/lib -I/home/jaehyun/build_arm -I/home/jaehyun/dynamorio/core/../third_party/libgcc/arm    -fPIC
 
 ASM_DEFINES = -DSTATIC_LIBRARY
 
-C_FLAGS = -mthumb -march=armv7-a  -fno-strict-aliasing -fno-stack-protector -fvisibility=internal  -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable   -I/home/hyeongjun/workspace/backup/core/drlibc -I/home/hyeongjun/workspace/backup/core/arch/arm -I/home/hyeongjun/workspace/backup/core/unix -I/home/hyeongjun/workspace/backup/core/arch -I/home/hyeongjun/workspace/backup/core/lib -I/home/hyeongjun/workspace/raspberrypi/build_arm -I/home/hyeongjun/workspace/backup/core/../third_party/libgcc/arm    -fPIC
+C_FLAGS = -mthumb -march=armv7-a  -fno-strict-aliasing -fno-stack-protector -fvisibility=internal  -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable   -I/home/jaehyun/dynamorio/core/drlibc -I/home/jaehyun/dynamorio/core/arch/arm -I/home/jaehyun/dynamorio/core/unix -I/home/jaehyun/dynamorio/core/arch -I/home/jaehyun/dynamorio/core/lib -I/home/jaehyun/build_arm -I/home/jaehyun/dynamorio/core/../third_party/libgcc/arm    -fPIC
 
 C_DEFINES = -DSTATIC_LIBRARY
 

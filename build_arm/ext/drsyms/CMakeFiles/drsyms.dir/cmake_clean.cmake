@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drsyms.dir/demangle.cc.o"
   "CMakeFiles/drsyms.dir/drsyms_common.c.o"
   "CMakeFiles/drsyms.dir/drsyms_elf.c.o"
-  "../lib32/debug/libdrsyms.pdb"
-  "../lib32/debug/libdrsyms.so"
+  "../lib32/release/libdrsyms.pdb"
+  "../lib32/release/libdrsyms.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drmemtrace_static.dir/common/named_pipe_unix.cpp.o"
   "CMakeFiles/drmemtrace_static.dir/common/options.cpp.o"
   "CMakeFiles/drmemtrace_static.dir/common/trace_entry.cpp.o"
-  "../lib32/debug/libdrmemtrace_static.pdb"
-  "../lib32/debug/libdrmemtrace_static.a"
+  "../lib32/release/libdrmemtrace_static.pdb"
+  "../lib32/release/libdrmemtrace_static.a"
 )
 
 # Per-language clean rules from dependency scanning.

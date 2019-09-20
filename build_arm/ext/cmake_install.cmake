@@ -1,8 +1,8 @@
-# Install script for directory: /home/hyeongjun/workspace/backup/ext
+# Install script for directory: /home/jaehyun/dynamorio/ext
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hyeongjun/workspace/backup/exports")
+  set(CMAKE_INSTALL_PREFIX "/home/jaehyun/dynamorio/exports")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -33,28 +33,28 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/lib32/debug" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/ext/lib32/debug/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/lib32/release" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/jaehyun/build_arm/ext/lib32/release/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/bin32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/ext/lib32/debug/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/bin32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/jaehyun/build_arm/ext/lib32/release/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/include" TYPE FILE FILES "/home/hyeongjun/workspace/backup/ext/drext.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/ext/include" TYPE FILE FILES "/home/jaehyun/dynamorio/ext/drext.h")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drcontainers/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drmgr/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drx/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drwrap/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drreg/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drsyms/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/droption/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drcovlib/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drcontainers/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drmgr/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drx/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drwrap/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drreg/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drsyms/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drutil/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/droption/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/drcovlib/cmake_install.cmake")
 
 endif()
 

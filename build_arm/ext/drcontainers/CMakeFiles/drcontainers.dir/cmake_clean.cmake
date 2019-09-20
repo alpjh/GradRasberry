@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drcontainers.dir/hashtable.c.o"
   "CMakeFiles/drcontainers.dir/drvector.c.o"
   "CMakeFiles/drcontainers.dir/drtable.c.o"
-  "../lib32/debug/libdrcontainers.pdb"
-  "../lib32/debug/libdrcontainers.a"
+  "../lib32/release/libdrcontainers.pdb"
+  "../lib32/release/libdrcontainers.a"
 )
 
 # Per-language clean rules from dependency scanning.

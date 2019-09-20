@@ -6,35 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/memtrace_simple.c
+/home/jaehyun/dynamorio/api/samples/memtrace_simple.c
 stdio.h
 -
 stddef.h
 -
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 drmgr.h
-/home/hyeongjun/workspace/backup/api/samples/drmgr.h
+/home/jaehyun/dynamorio/api/samples/drmgr.h
 drreg.h
-/home/hyeongjun/workspace/backup/api/samples/drreg.h
+/home/jaehyun/dynamorio/api/samples/drreg.h
 drutil.h
-/home/hyeongjun/workspace/backup/api/samples/drutil.h
+/home/jaehyun/dynamorio/api/samples/drutil.h
 utils.h
-/home/hyeongjun/workspace/backup/api/samples/utils.h
+/home/jaehyun/dynamorio/api/samples/utils.h
 
-/home/hyeongjun/workspace/backup/api/samples/utils.c
+/home/jaehyun/dynamorio/api/samples/utils.c
 utils.h
-/home/hyeongjun/workspace/backup/api/samples/utils.h
+/home/jaehyun/dynamorio/api/samples/utils.h
 drx.h
-/home/hyeongjun/workspace/backup/api/samples/drx.h
+/home/jaehyun/dynamorio/api/samples/drx.h
 stdio.h
 -
 io.h
 -
 
-/home/hyeongjun/workspace/backup/api/samples/utils.h
+/home/jaehyun/dynamorio/api/samples/utils.h
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 stdio.h
 -
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drutil.dir/drutil.c.o"
-  "../lib32/debug/libdrutil.pdb"
-  "../lib32/debug/libdrutil.so"
+  "../lib32/release/libdrutil.pdb"
+  "../lib32/release/libdrutil.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/hyeongjun/workspace/backup
+# Install script for directory: /home/jaehyun/dynamorio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hyeongjun/workspace/backup/exports")
+  set(CMAKE_INSTALL_PREFIX "/home/jaehyun/dynamorio/exports")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -34,66 +34,66 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES
-    "/home/hyeongjun/workspace/raspberrypi/build_arm/cmake/DynamoRIOConfig.cmake"
-    "/home/hyeongjun/workspace/raspberrypi/build_arm/cmake/DynamoRIOConfigVersion.cmake"
+    "/home/jaehyun/build_arm/cmake/DynamoRIOConfig.cmake"
+    "/home/jaehyun/build_arm/cmake/DynamoRIOConfigVersion.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES
-    "/home/hyeongjun/workspace/backup/suite/runsuite_common_pre.cmake"
-    "/home/hyeongjun/workspace/backup/suite/runsuite_common_post.cmake"
+    "/home/jaehyun/dynamorio/suite/runsuite_common_pre.cmake"
+    "/home/jaehyun/dynamorio/suite/runsuite_common_post.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/hyeongjun/workspace/backup/suite/lookup_visualstudio.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/jaehyun/dynamorio/suite/lookup_visualstudio.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/hyeongjun/workspace/backup/make/cpp2asm_support.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/jaehyun/dynamorio/make/cpp2asm_support.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "cpp2asm_add_newlines.cmake" FILES "/home/hyeongjun/workspace/backup/make/CMake_asm.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "cpp2asm_add_newlines.cmake" FILES "/home/jaehyun/dynamorio/make/CMake_asm.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(READ "/home/hyeongjun/workspace/backup/core/arch/asm_defines.asm" str)
+  file(READ "/home/jaehyun/dynamorio/core/arch/asm_defines.asm" str)
   string(REPLACE "#include \"configure.h\"" "" str "${str}")
   file(WRITE "${CMAKE_INSTALL_PREFIX}/cmake/cpp2asm_defines.h" "${str}")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "docs_rundoxygen.cmake" FILES "/home/hyeongjun/workspace/backup/api/docs/CMake_rundoxygen.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "docs_rundoxygen.cmake" FILES "/home/jaehyun/dynamorio/api/docs/CMake_rundoxygen.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "docs_doxyutils.cmake" FILES "/home/hyeongjun/workspace/backup/api/docs/CMake_doxyutils.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE RENAME "docs_doxyutils.cmake" FILES "/home/jaehyun/dynamorio/api/docs/CMake_doxyutils.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/include" REGEX "annotations/valgrind.h|annotations/memcheck.h" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE DIRECTORY FILES "/home/jaehyun/build_arm/include" REGEX "annotations/valgrind.h|annotations/memcheck.h" EXCLUDE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE FILE FILES
-    "/home/hyeongjun/workspace/backup/README"
-    "/home/hyeongjun/workspace/backup/License.txt"
-    "/home/hyeongjun/workspace/backup/ACKNOWLEDGEMENTS"
+    "/home/jaehyun/dynamorio/README"
+    "/home/jaehyun/dynamorio/License.txt"
+    "/home/jaehyun/dynamorio/ACKNOWLEDGEMENTS"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*" REGEX "/dynamorio\\.pdb$" EXCLUDE REGEX "/libdynamorio\\.so\\.[^/]*debug$" EXCLUDE REGEX "/libdrpreload\\.so\\.debug$" EXCLUDE REGEX "/policy\\_static\\.pdb$" EXCLUDE REGEX ".*dynamorio.*.dSYM/.*" EXCLUDE REGEX "libdrpreload.*.dSYM/.*" EXCLUDE REGEX "policy_static.*.dSYM/.*" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/jaehyun/build_arm/lib32/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*" REGEX "/dynamorio\\.pdb$" EXCLUDE REGEX "/libdynamorio\\.so\\.[^/]*debug$" EXCLUDE REGEX "/libdrpreload\\.so\\.debug$" EXCLUDE REGEX "/policy\\_static\\.pdb$" EXCLUDE REGEX ".*dynamorio.*.dSYM/.*" EXCLUDE REGEX "libdrpreload.*.dSYM/.*" EXCLUDE REGEX "policy_static.*.dSYM/.*" EXCLUDE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/debug" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/debug/" FILES_MATCHING REGEX "/dynamorio\\.pdb$" REGEX "/libdynamorio\\.so\\.[^/]*debug$" REGEX "/libdrpreload\\.so\\.debug$" REGEX ".*dynamorio.*.dSYM/.*DWARF/.*" REGEX "libdrpreload.*.dSYM/.*DWARF/.*")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib32/release" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/jaehyun/build_arm/lib32/release/" FILES_MATCHING REGEX "/dynamorio\\.pdb$" REGEX "/libdynamorio\\.so\\.[^/]*debug$" REGEX "/libdrpreload\\.so\\.debug$" REGEX ".*dynamorio.*.dSYM/.*DWARF/.*" REGEX "libdrpreload.*.dSYM/.*DWARF/.*")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/bin32/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*" REGEX "/runstats\\.debug$" EXCLUDE REGEX "/run\\_in\\_bg\\.debug$" EXCLUDE REGEX "/[^/]*\\_exe\\.debug$" EXCLUDE REGEX "runstats.dSYM/.*" EXCLUDE REGEX "run_in_bg.dSYM/.*" EXCLUDE REGEX ".*_exe.dSYM/.*" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin32" TYPE DIRECTORY PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/jaehyun/build_arm/bin32/" FILES_MATCHING REGEX "/[^/]*\\.debug$" REGEX "/[^/]*\\.pdb$" REGEX ".*.dSYM/.*DWARF/.*" REGEX "/runstats\\.debug$" EXCLUDE REGEX "/run\\_in\\_bg\\.debug$" EXCLUDE REGEX "/[^/]*\\_exe\\.debug$" EXCLUDE REGEX "runstats.dSYM/.*" EXCLUDE REGEX "run_in_bg.dSYM/.*" EXCLUDE REGEX ".*_exe.dSYM/.*" EXCLUDE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -106,7 +106,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(APPEND "/home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake" "
+  file(APPEND "/home/jaehyun/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake" "
 SET_PROPERTY(TARGET dynamorio PROPERTY MAP_IMPORTED_CONFIG_RELEASE RelWithDebInfo)
 SET_PROPERTY(TARGET dynamorio PROPERTY MAP_IMPORTED_CONFIG_RELMINSIZE RelWithDebInfo)
 
@@ -209,7 +209,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32.cmake"
-         "/home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
+         "/home/jaehyun/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/cmake/DynamoRIOTarget32-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -218,20 +218,20 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32-debug.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/jaehyun/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/cmake" TYPE FILE FILES "/home/jaehyun/build_arm/CMakeFiles/Export/cmake/DynamoRIOTarget32-relwithdebinfo.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/core/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/libutil/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/tools/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/clients/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/ext/cmake_install.cmake")
-  include("/home/hyeongjun/workspace/raspberrypi/build_arm/api/samples/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/core/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/libutil/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/tools/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/clients/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/ext/cmake_install.cmake")
+  include("/home/jaehyun/build_arm/api/samples/cmake_install.cmake")
 
 endif()
 
@@ -243,5 +243,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hyeongjun/workspace/raspberrypi/build_arm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jaehyun/build_arm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

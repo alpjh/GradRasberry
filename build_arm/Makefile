@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -114,7 +114,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/hyeongjun/workspace/raspberrypi/build_arm/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/jaehyun/build_arm/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -133,9 +133,9 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles /home/jaehyun/build_arm/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jaehyun/build_arm/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -382,6 +382,45 @@ runstats: cmake_check_build_system
 runstats/fast:
 	$(MAKE) -f tools/CMakeFiles/runstats.dir/build.make tools/CMakeFiles/runstats.dir/build
 .PHONY : runstats/fast
+
+#=============================================================================
+# Target rules for targets named drcpusim
+
+# Build rule for target.
+drcpusim: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drcpusim
+.PHONY : drcpusim
+
+# fast build rule for target.
+drcpusim/fast:
+	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim.dir/build.make clients/drcpusim/CMakeFiles/drcpusim.dir/build
+.PHONY : drcpusim/fast
+
+#=============================================================================
+# Target rules for targets named drcpusim_docs
+
+# Build rule for target.
+drcpusim_docs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drcpusim_docs
+.PHONY : drcpusim_docs
+
+# fast build rule for target.
+drcpusim_docs/fast:
+	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim_docs.dir/build.make clients/drcpusim/CMakeFiles/drcpusim_docs.dir/build
+.PHONY : drcpusim_docs/fast
+
+#=============================================================================
+# Target rules for targets named drcpusim_ops
+
+# Build rule for target.
+drcpusim_ops: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 drcpusim_ops
+.PHONY : drcpusim_ops
+
+# fast build rule for target.
+drcpusim_ops/fast:
+	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build.make clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build
+.PHONY : drcpusim_ops/fast
 
 #=============================================================================
 # Target rules for targets named drcov
@@ -655,45 +694,6 @@ opcode_mix_launcher: cmake_check_build_system
 opcode_mix_launcher/fast:
 	$(MAKE) -f clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/build.make clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/build
 .PHONY : opcode_mix_launcher/fast
-
-#=============================================================================
-# Target rules for targets named drcpusim
-
-# Build rule for target.
-drcpusim: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drcpusim
-.PHONY : drcpusim
-
-# fast build rule for target.
-drcpusim/fast:
-	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim.dir/build.make clients/drcpusim/CMakeFiles/drcpusim.dir/build
-.PHONY : drcpusim/fast
-
-#=============================================================================
-# Target rules for targets named drcpusim_docs
-
-# Build rule for target.
-drcpusim_docs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drcpusim_docs
-.PHONY : drcpusim_docs
-
-# fast build rule for target.
-drcpusim_docs/fast:
-	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim_docs.dir/build.make clients/drcpusim/CMakeFiles/drcpusim_docs.dir/build
-.PHONY : drcpusim_docs/fast
-
-#=============================================================================
-# Target rules for targets named drcpusim_ops
-
-# Build rule for target.
-drcpusim_ops: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drcpusim_ops
-.PHONY : drcpusim_ops
-
-# fast build rule for target.
-drcpusim_ops/fast:
-	$(MAKE) -f clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build.make clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build
-.PHONY : drcpusim_ops/fast
 
 #=============================================================================
 # Target rules for targets named drcontainers
@@ -1155,6 +1155,9 @@ help:
 	@echo "... drinject"
 	@echo "... nudgeunix"
 	@echo "... run_in_bg"
+	@echo "... drcpusim"
+	@echo "... drcpusim_docs"
+	@echo "... drcpusim_ops"
 	@echo "... drcov_docs"
 	@echo "... drcov2lcov"
 	@echo "... drcov"
@@ -1176,9 +1179,6 @@ help:
 	@echo "... drcachesim"
 	@echo "... drcachesim_ops"
 	@echo "... drmemtrace"
-	@echo "... drcpusim"
-	@echo "... drcpusim_docs"
-	@echo "... drcpusim_ops"
 	@echo "... drcontainers"
 	@echo "... drmgr"
 	@echo "... drmgr_static"

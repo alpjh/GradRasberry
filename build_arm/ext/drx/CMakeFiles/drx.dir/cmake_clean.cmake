@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drx.dir/drx.c.o"
   "CMakeFiles/drx.dir/drx_buf.c.o"
-  "../lib32/debug/libdrx.pdb"
-  "../lib32/debug/libdrx.so"
+  "../lib32/release/libdrx.pdb"
+  "../lib32/release/libdrx.so"
 )
 
 # Per-language clean rules from dependency scanning.

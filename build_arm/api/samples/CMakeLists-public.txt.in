@@ -202,6 +202,8 @@ use_DynamoRIO_extension(myclient drwrap)
 use_DynamoRIO_extension(myclient drmgr)
 use_DynamoRIO_extension(myclient drsyms)
 
+
+
 add_sample_client(bbbuf       "bbbuf.c"         "drmgr;drreg;drx")
 add_sample_client(bbcount     "bbcount.c"       "drmgr;drreg;drx")
 add_sample_client(bbsize      "bbsize.c"        "drmgr")

@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdrcontainers.a"
+  "../lib32/release/libdrcontainers.a"
 )

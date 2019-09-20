@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drmgr.dir/drmgr.c.o"
-  "../lib32/debug/libdrmgr.pdb"
-  "../lib32/debug/libdrmgr.so"
+  "../lib32/release/libdrmgr.pdb"
+  "../lib32/release/libdrmgr.so"
 )
 
 # Per-language clean rules from dependency scanning.

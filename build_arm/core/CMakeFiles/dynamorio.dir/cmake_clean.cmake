@@ -90,8 +90,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/dynamorio.dir/unix/signal_linux_arm.c.o"
   "CMakeFiles/dynamorio.dir/unix/native_elf.c.o"
   "CMakeFiles/dynamorio.dir/unix/nudgesig.c.o"
-  "../lib32/debug/libdynamorio.pdb"
-  "../lib32/debug/libdynamorio.so"
+  "../lib32/release/libdynamorio.pdb"
+  "../lib32/release/libdynamorio.so"
 )
 
 # Per-language clean rules from dependency scanning.

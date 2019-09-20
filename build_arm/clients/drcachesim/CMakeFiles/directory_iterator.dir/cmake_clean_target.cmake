@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdirectory_iterator.a"
+  "../lib32/release/libdirectory_iterator.a"
 )

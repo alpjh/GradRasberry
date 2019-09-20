@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include api/samples/CMakeFiles/bbsize.dir/depend.make
@@ -50,18 +50,18 @@ include api/samples/CMakeFiles/bbsize.dir/progress.make
 include api/samples/CMakeFiles/bbsize.dir/flags.make
 
 api/samples/CMakeFiles/bbsize.dir/bbsize.c.o: api/samples/CMakeFiles/bbsize.dir/flags.make
-api/samples/CMakeFiles/bbsize.dir/bbsize.c.o: /home/hyeongjun/workspace/backup/api/samples/bbsize.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+api/samples/CMakeFiles/bbsize.dir/bbsize.c.o: /home/jaehyun/dynamorio/api/samples/bbsize.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object api/samples/CMakeFiles/bbsize.dir/bbsize.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -o CMakeFiles/bbsize.dir/bbsize.c.o   -c /home/hyeongjun/workspace/backup/api/samples/bbsize.c
+	cd /home/jaehyun/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -o CMakeFiles/bbsize.dir/bbsize.c.o   -c /home/jaehyun/dynamorio/api/samples/bbsize.c
 
 api/samples/CMakeFiles/bbsize.dir/bbsize.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bbsize.dir/bbsize.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -E /home/hyeongjun/workspace/backup/api/samples/bbsize.c > CMakeFiles/bbsize.dir/bbsize.c.i
+	cd /home/jaehyun/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -E /home/jaehyun/dynamorio/api/samples/bbsize.c > CMakeFiles/bbsize.dir/bbsize.c.i
 
 api/samples/CMakeFiles/bbsize.dir/bbsize.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bbsize.dir/bbsize.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -S /home/hyeongjun/workspace/backup/api/samples/bbsize.c -o CMakeFiles/bbsize.dir/bbsize.c.s
+	cd /home/jaehyun/build_arm/api/samples && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2 -fno-stack-protector -S /home/jaehyun/dynamorio/api/samples/bbsize.c -o CMakeFiles/bbsize.dir/bbsize.c.s
 
 api/samples/CMakeFiles/bbsize.dir/bbsize.c.o.requires:
 .PHONY : api/samples/CMakeFiles/bbsize.dir/bbsize.c.o.requires
@@ -81,12 +81,12 @@ bbsize_EXTERNAL_OBJECTS =
 
 api/bin/libbbsize.so: api/samples/CMakeFiles/bbsize.dir/bbsize.c.o
 api/bin/libbbsize.so: api/samples/CMakeFiles/bbsize.dir/build.make
-api/bin/libbbsize.so: ext/lib32/debug/libdrmgr.so
-api/bin/libbbsize.so: lib32/debug/libdynamorio.so
+api/bin/libbbsize.so: ext/lib32/release/libdrmgr.so
+api/bin/libbbsize.so: lib32/release/libdynamorio.so
 api/bin/libbbsize.so: api/samples/CMakeFiles/bbsize.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../bin/libbbsize.so"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bbsize.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -c /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples/../bin/libbbsize.so"
+	cd /home/jaehyun/build_arm/api/samples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bbsize.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/jaehyun/build_arm/api/samples && /usr/bin/cmake -E echo "Usage: pass to drconfig or drrun: -c /home/jaehyun/build_arm/api/samples/../bin/libbbsize.so"
 
 # Rule to build all files generated by this target.
 api/samples/CMakeFiles/bbsize.dir/build: api/bin/libbbsize.so
@@ -96,10 +96,10 @@ api/samples/CMakeFiles/bbsize.dir/requires: api/samples/CMakeFiles/bbsize.dir/bb
 .PHONY : api/samples/CMakeFiles/bbsize.dir/requires
 
 api/samples/CMakeFiles/bbsize.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/bbsize.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/api/samples && $(CMAKE_COMMAND) -P CMakeFiles/bbsize.dir/cmake_clean.cmake
 .PHONY : api/samples/CMakeFiles/bbsize.dir/clean
 
 api/samples/CMakeFiles/bbsize.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/api/samples /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples /home/hyeongjun/workspace/raspberrypi/build_arm/api/samples/CMakeFiles/bbsize.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/api/samples /home/jaehyun/build_arm /home/jaehyun/build_arm/api/samples /home/jaehyun/build_arm/api/samples/CMakeFiles/bbsize.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : api/samples/CMakeFiles/bbsize.dir/depend
 

@@ -1,1 +1,1 @@
-set(drrunloc "/home/hyeongjun/workspace/raspberrypi/build_arm/bin32/drrun")
+set(drrunloc "/home/jaehyun/build_arm/bin32/drrun")

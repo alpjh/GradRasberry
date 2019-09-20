@@ -31,7 +31,7 @@
 
 # Support clients specifying a version number to the find_package() command:
 
-set(PACKAGE_VERSION 7.91.18122)
+set(PACKAGE_VERSION 7.91.18052)
 
 # note that PACKAGE_VERSION_UNSUITABLE is meant for complete
 # binary incompatibility w/ any version: for a version mismatch,
@@ -50,9 +50,9 @@ elseif ("${PACKAGE_FIND_VERSION_MAJOR}" EQUAL 7)
   # Asking for lesser minor version == backward compatible in general
   if ("${PACKAGE_FIND_VERSION_MINOR}" EQUAL 91)
     if ("${PACKAGE_FIND_VERSION_COUNT}" GREATER 2)
-      if ("${PACKAGE_FIND_VERSION_PATCH}" LESS 18122)
+      if ("${PACKAGE_FIND_VERSION_PATCH}" LESS 18052)
         set(PACKAGE_VERSION_COMPATIBLE 1)
-      elseif ("${PACKAGE_FIND_VERSION_PATCH}" EQUAL 18122)
+      elseif ("${PACKAGE_FIND_VERSION_PATCH}" EQUAL 18052)
         set(PACKAGE_VERSION_EXACT 1)
       else ()
         # asking for specific version so cannot give out older

@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib32/debug/libdrwrap_static.a"
+  "../lib32/release/libdrwrap_static.a"
 )

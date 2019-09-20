@@ -1,2 +1,2 @@
-/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdrmemtrace_basic_counts.a  CMakeFiles/drmemtrace_basic_counts.dir/tools/basic_counts.cpp.o
-/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdrmemtrace_basic_counts.a
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/release/libdrmemtrace_basic_counts.a  CMakeFiles/drmemtrace_basic_counts.dir/tools/basic_counts.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/release/libdrmemtrace_basic_counts.a

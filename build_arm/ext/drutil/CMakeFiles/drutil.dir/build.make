@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Include any dependencies generated for this target.
 include ext/drutil/CMakeFiles/drutil.dir/depend.make
@@ -50,18 +50,18 @@ include ext/drutil/CMakeFiles/drutil.dir/progress.make
 include ext/drutil/CMakeFiles/drutil.dir/flags.make
 
 ext/drutil/CMakeFiles/drutil.dir/drutil.c.o: ext/drutil/CMakeFiles/drutil.dir/flags.make
-ext/drutil/CMakeFiles/drutil.dir/drutil.c.o: /home/hyeongjun/workspace/backup/ext/drutil/drutil.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+ext/drutil/CMakeFiles/drutil.dir/drutil.c.o: /home/jaehyun/dynamorio/ext/drutil/drutil.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object ext/drutil/CMakeFiles/drutil.dir/drutil.c.o"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -o CMakeFiles/drutil.dir/drutil.c.o   -c /home/hyeongjun/workspace/backup/ext/drutil/drutil.c
+	cd /home/jaehyun/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -o CMakeFiles/drutil.dir/drutil.c.o   -c /home/jaehyun/dynamorio/ext/drutil/drutil.c
 
 ext/drutil/CMakeFiles/drutil.dir/drutil.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/drutil.dir/drutil.c.i"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -E /home/hyeongjun/workspace/backup/ext/drutil/drutil.c > CMakeFiles/drutil.dir/drutil.c.i
+	cd /home/jaehyun/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -E /home/jaehyun/dynamorio/ext/drutil/drutil.c > CMakeFiles/drutil.dir/drutil.c.i
 
 ext/drutil/CMakeFiles/drutil.dir/drutil.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/drutil.dir/drutil.c.s"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -g3 -fno-omit-frame-pointer -fno-builtin-strcmp -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -S /home/hyeongjun/workspace/backup/ext/drutil/drutil.c -o CMakeFiles/drutil.dir/drutil.c.s
+	cd /home/jaehyun/build_arm/ext/drutil && /usr/bin/arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_FLAGS) -mthumb -march=armv7-a -fno-strict-aliasing -fno-stack-protector -fvisibility=internal -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -fno-stack-protector -nostdlib -mthumb -S /home/jaehyun/dynamorio/ext/drutil/drutil.c -o CMakeFiles/drutil.dir/drutil.c.s
 
 ext/drutil/CMakeFiles/drutil.dir/drutil.c.o.requires:
 .PHONY : ext/drutil/CMakeFiles/drutil.dir/drutil.c.o.requires
@@ -79,26 +79,26 @@ drutil_OBJECTS = \
 # External object files for target drutil
 drutil_EXTERNAL_OBJECTS =
 
-ext/lib32/debug/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/drutil.c.o
-ext/lib32/debug/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/build.make
-ext/lib32/debug/libdrutil.so: ext/lib32/debug/libdrmgr.so
-ext/lib32/debug/libdrutil.so: lib32/debug/libdynamorio.so
-ext/lib32/debug/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../lib32/debug/libdrutil.so"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drutil.dir/link.txt --verbose=$(VERBOSE)
+ext/lib32/release/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/drutil.c.o
+ext/lib32/release/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/build.make
+ext/lib32/release/libdrutil.so: ext/lib32/release/libdrmgr.so
+ext/lib32/release/libdrutil.so: lib32/release/libdynamorio.so
+ext/lib32/release/libdrutil.so: ext/drutil/CMakeFiles/drutil.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C shared library ../lib32/release/libdrutil.so"
+	cd /home/jaehyun/build_arm/ext/drutil && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drutil.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-ext/drutil/CMakeFiles/drutil.dir/build: ext/lib32/debug/libdrutil.so
+ext/drutil/CMakeFiles/drutil.dir/build: ext/lib32/release/libdrutil.so
 .PHONY : ext/drutil/CMakeFiles/drutil.dir/build
 
 ext/drutil/CMakeFiles/drutil.dir/requires: ext/drutil/CMakeFiles/drutil.dir/drutil.c.o.requires
 .PHONY : ext/drutil/CMakeFiles/drutil.dir/requires
 
 ext/drutil/CMakeFiles/drutil.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil && $(CMAKE_COMMAND) -P CMakeFiles/drutil.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/ext/drutil && $(CMAKE_COMMAND) -P CMakeFiles/drutil.dir/cmake_clean.cmake
 .PHONY : ext/drutil/CMakeFiles/drutil.dir/clean
 
 ext/drutil/CMakeFiles/drutil.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/ext/drutil /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil /home/hyeongjun/workspace/raspberrypi/build_arm/ext/drutil/CMakeFiles/drutil.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/ext/drutil /home/jaehyun/build_arm /home/jaehyun/build_arm/ext/drutil /home/jaehyun/build_arm/ext/drutil/CMakeFiles/drutil.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ext/drutil/CMakeFiles/drutil.dir/depend
 

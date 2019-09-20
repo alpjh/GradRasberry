@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drreg.dir/drreg.c.o"
-  "../lib32/debug/libdrreg.pdb"
-  "../lib32/debug/libdrreg.so"
+  "../lib32/release/libdrreg.pdb"
+  "../lib32/release/libdrreg.so"
 )
 
 # Per-language clean rules from dependency scanning.

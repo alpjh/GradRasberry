@@ -74,18 +74,15 @@ static void *max_lock; /* to synch writes to max_malloc */
 static void
 module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
 {
-    //app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, MALLOC_ROUTINE_NAME);
-
-    app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, "print_hello");
+    app_pc towrap = (app_pc)dr_get_proc_address(mod->handle, MALLOC_ROUTINE_NAME);
     if (towrap != NULL) {
-				dr_fprintf(STDERR, "[For debug] load ok");
 #ifdef SHOW_RESULTS
         bool ok =
 #endif
             drwrap_wrap(towrap, wrap_pre, wrap_post);
 #ifdef SHOW_RESULTS
         if (ok) {
-            dr_fprintf(STDERR, "[load_event]<wrapped " MALLOC_ROUTINE_NAME " @" PFX "\n", towrap);
+            dr_fprintf(STDERR, "<wrapped " MALLOC_ROUTINE_NAME " @" PFX "\n", towrap);
         } else {
             /* We expect this w/ forwarded exports (e.g., on win7 both
              * kernel32!HeapAlloc and kernelbase!HeapAlloc forward to
@@ -130,7 +127,7 @@ event_exit(void)
     char msg[256];
     int len;
     len = dr_snprintf(msg, sizeof(msg) / sizeof(msg[0]),
-                      "[Event exit]<Largest " MALLOC_ROUTINE_NAME
+                      "<Largest " MALLOC_ROUTINE_NAME
                       " request: %d>\n<OOM simulations: %d>\n",
                       max_malloc, malloc_oom);
     DR_ASSERT(len > 0);

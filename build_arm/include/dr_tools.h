@@ -252,13 +252,6 @@ void *
 dr_standalone_init(void);
 
 /**
- * Restores application state modified by dr_standalone_init(), which can
- * include some signal handlers.
- */
-void
-dr_standalone_exit(void);
-
-/**
  * Use this dcontext for use with the standalone static decoder library.
  * Pass it whenever a decoding-related API routine asks for a context.
  */

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/directory_iterator.dir/common/directory_iterator.cpp.o"
-  "../lib32/debug/libdirectory_iterator.pdb"
-  "../lib32/debug/libdirectory_iterator.a"
+  "../lib32/release/libdirectory_iterator.pdb"
+  "../lib32/release/libdirectory_iterator.a"
 )
 
 # Per-language clean rules from dependency scanning.

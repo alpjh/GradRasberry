@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/api/samples/empty.c
+/home/jaehyun/dynamorio/api/samples/empty.c
 dr_api.h
-/home/hyeongjun/workspace/backup/api/samples/dr_api.h
+/home/jaehyun/dynamorio/api/samples/dr_api.h
 
 cmake/../include/dr_api.h
 dr_defines.h

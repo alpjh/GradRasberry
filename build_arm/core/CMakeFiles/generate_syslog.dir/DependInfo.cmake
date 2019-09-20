@@ -9,13 +9,13 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/hyeongjun/workspace/backup/core/drlibc"
-  "/home/hyeongjun/workspace/backup/core/arch/arm"
-  "/home/hyeongjun/workspace/backup/core/unix"
-  "/home/hyeongjun/workspace/backup/core/arch"
-  "/home/hyeongjun/workspace/backup/core/lib"
+  "/home/jaehyun/dynamorio/core/drlibc"
+  "/home/jaehyun/dynamorio/core/arch/arm"
+  "/home/jaehyun/dynamorio/core/unix"
+  "/home/jaehyun/dynamorio/core/arch"
+  "/home/jaehyun/dynamorio/core/lib"
   "."
-  "/home/hyeongjun/workspace/backup/core/../third_party/libgcc/arm"
+  "/home/jaehyun/dynamorio/core/../third_party/libgcc/arm"
   )
 set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

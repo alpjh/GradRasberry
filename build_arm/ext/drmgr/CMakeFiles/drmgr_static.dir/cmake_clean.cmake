@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drmgr_static.dir/drmgr.c.o"
-  "../lib32/debug/libdrmgr_static.pdb"
-  "../lib32/debug/libdrmgr_static.a"
+  "../lib32/release/libdrmgr_static.pdb"
+  "../lib32/release/libdrmgr_static.a"
 )
 
 # Per-language clean rules from dependency scanning.

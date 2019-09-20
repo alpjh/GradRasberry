@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/drmemtrace_analyzer.dir/reader/reader.cpp.o"
   "CMakeFiles/drmemtrace_analyzer.dir/reader/config_reader.cpp.o"
   "CMakeFiles/drmemtrace_analyzer.dir/reader/file_reader.cpp.o"
-  "../lib32/debug/libdrmemtrace_analyzer.pdb"
-  "../lib32/debug/libdrmemtrace_analyzer.a"
+  "../lib32/release/libdrmemtrace_analyzer.pdb"
+  "../lib32/release/libdrmemtrace_analyzer.a"
 )
 
 # Per-language clean rules from dependency scanning.

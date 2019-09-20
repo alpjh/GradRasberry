@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/hyeongjun/workspace/backup/ext/drmgr/drmgr.c" "/home/hyeongjun/workspace/raspberrypi/build_arm/ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.o"
+  "/home/jaehyun/dynamorio/ext/drmgr/drmgr.c" "/home/jaehyun/build_arm/ext/drmgr/CMakeFiles/drmgr_static.dir/drmgr.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/hyeongjun/workspace/raspberrypi/build_arm/core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
+  "/home/jaehyun/build_arm/core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "."
   "cmake/../include"
-  "/home/hyeongjun/workspace/backup/ext/drmgr/ext/lib32/debug"
+  "/home/jaehyun/dynamorio/ext/drmgr/ext/lib32/release"
   )
 set(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 set(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

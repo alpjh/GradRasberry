@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drmemtrace_basic_counts.dir/tools/basic_counts.cpp.o"
-  "../lib32/debug/libdrmemtrace_basic_counts.pdb"
-  "../lib32/debug/libdrmemtrace_basic_counts.a"
+  "../lib32/release/libdrmemtrace_basic_counts.pdb"
+  "../lib32/release/libdrmemtrace_basic_counts.a"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/hyeongjun/workspace/backup/ext/drsyms/drsyms.h
+/home/jaehyun/dynamorio/ext/drsyms/drsyms.h
 
-/home/hyeongjun/workspace/backup/ext/drsyms/drsyms_bench.c
+/home/jaehyun/dynamorio/ext/drsyms/drsyms_bench.c
 stdio.h
 -
 stdlib.h
@@ -16,9 +16,9 @@ stdlib.h
 string.h
 -
 dr_api.h
-/home/hyeongjun/workspace/backup/ext/drsyms/dr_api.h
+/home/jaehyun/dynamorio/ext/drsyms/dr_api.h
 drsyms.h
-/home/hyeongjun/workspace/backup/ext/drsyms/drsyms.h
+/home/jaehyun/dynamorio/ext/drsyms/drsyms.h
 
 cmake/../include/dr_api.h
 dr_defines.h

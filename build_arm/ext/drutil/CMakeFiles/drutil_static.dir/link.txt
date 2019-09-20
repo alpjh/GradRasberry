@@ -1,2 +1,2 @@
-/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/debug/libdrutil_static.a  CMakeFiles/drutil_static.dir/drutil.c.o
-/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/debug/libdrutil_static.a
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/release/libdrutil_static.a  CMakeFiles/drutil_static.dir/drutil.c.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/release/libdrutil_static.a

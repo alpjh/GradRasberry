@@ -66,4 +66,3 @@
 #define MSG_FAILED_TO_SATISFY_W_XOR_X_STRING "Application %s (%s). Failed to satisfy W^X policies."
 #define MSG_OUT_OF_VMM_CANNOT_USE_OS_STRING "Application %s (%s). Out of contiguous memory. %s"
 #define MSG_AVX_512_SUPPORT_INCOMPLETE_STRING "Application %s (%s): AVX-512 was detected at PC %s. AVX-512 is not fully supported yet."
-#define MSG_RSEQ_BEHAVIOR_UNSUPPORTED_STRING "Application %s (%s). Restartable sequence behavior is not supported: %s."

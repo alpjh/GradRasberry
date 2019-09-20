@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyeongjun/workspace/backup
+CMAKE_SOURCE_DIR = /home/jaehyun/dynamorio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyeongjun/workspace/raspberrypi/build_arm
+CMAKE_BINARY_DIR = /home/jaehyun/build_arm
 
 # Utility rule file for drcachesim_docs.
 
@@ -47,12 +47,12 @@ include clients/drcachesim/CMakeFiles/drcachesim_docs.dir/progress.make
 
 clients/drcachesim/CMakeFiles/drcachesim_docs: clients/drcachesim/drcachesim.dox
 
-clients/drcachesim/drcachesim.dox: /home/hyeongjun/workspace/backup/clients/drcachesim/drcachesim.dox.in
+clients/drcachesim/drcachesim.dox: /home/jaehyun/dynamorio/clients/drcachesim/drcachesim.dox.in
 clients/drcachesim/drcachesim.dox: clients/bin32/drcachesim_ops
-clients/drcachesim/drcachesim.dox: /home/hyeongjun/workspace/backup/clients/drcachesim/common/options.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hyeongjun/workspace/raspberrypi/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
+clients/drcachesim/drcachesim.dox: /home/jaehyun/dynamorio/clients/drcachesim/common/options.h
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jaehyun/build_arm/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating drcachesim.dox"
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && /usr/bin/cmake -D src=/home/hyeongjun/workspace/backup/clients/drcachesim/drcachesim.dox.in -D dst=/home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim/drcachesim.dox -D prog=/home/hyeongjun/workspace/raspberrypi/build_arm/clients/bin32/drcachesim_ops -P /home/hyeongjun/workspace/backup/clients/drcachesim/../common/gendocs.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && /usr/bin/cmake -D src=/home/jaehyun/dynamorio/clients/drcachesim/drcachesim.dox.in -D dst=/home/jaehyun/build_arm/clients/drcachesim/drcachesim.dox -D prog=/home/jaehyun/build_arm/clients/bin32/drcachesim_ops -P /home/jaehyun/dynamorio/clients/drcachesim/../common/gendocs.cmake
 
 drcachesim_docs: clients/drcachesim/CMakeFiles/drcachesim_docs
 drcachesim_docs: clients/drcachesim/drcachesim.dox
@@ -64,10 +64,10 @@ clients/drcachesim/CMakeFiles/drcachesim_docs.dir/build: drcachesim_docs
 .PHONY : clients/drcachesim/CMakeFiles/drcachesim_docs.dir/build
 
 clients/drcachesim/CMakeFiles/drcachesim_docs.dir/clean:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drcachesim_docs.dir/cmake_clean.cmake
+	cd /home/jaehyun/build_arm/clients/drcachesim && $(CMAKE_COMMAND) -P CMakeFiles/drcachesim_docs.dir/cmake_clean.cmake
 .PHONY : clients/drcachesim/CMakeFiles/drcachesim_docs.dir/clean
 
 clients/drcachesim/CMakeFiles/drcachesim_docs.dir/depend:
-	cd /home/hyeongjun/workspace/raspberrypi/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hyeongjun/workspace/backup /home/hyeongjun/workspace/backup/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim /home/hyeongjun/workspace/raspberrypi/build_arm/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jaehyun/build_arm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jaehyun/dynamorio /home/jaehyun/dynamorio/clients/drcachesim /home/jaehyun/build_arm /home/jaehyun/build_arm/clients/drcachesim /home/jaehyun/build_arm/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : clients/drcachesim/CMakeFiles/drcachesim_docs.dir/depend
 

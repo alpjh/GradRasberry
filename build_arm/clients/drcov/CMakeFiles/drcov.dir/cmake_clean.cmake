@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/drcov.dir/drcov.c.o"
-  "../lib32/debug/libdrcov.pdb"
-  "../lib32/debug/libdrcov.so"
+  "../lib32/release/libdrcov.pdb"
+  "../lib32/release/libdrcov.so"
 )
 
 # Per-language clean rules from dependency scanning.

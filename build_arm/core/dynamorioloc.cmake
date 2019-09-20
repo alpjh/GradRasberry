@@ -1,1 +1,1 @@
-set(dynamorioloc "/home/hyeongjun/workspace/raspberrypi/build_arm/lib32/debug/libdynamorio.so")
+set(dynamorioloc "/home/jaehyun/build_arm/lib32/release/libdynamorio.so")

@@ -1,5 +1,5 @@
 /* **********************************************************
- * Copyright (c) 2016-2019 Google, Inc.  All rights reserved.
+ * Copyright (c) 2016-2018 Google, Inc.  All rights reserved.
  * **********************************************************/
 
 /*
@@ -52,6 +52,7 @@
 #include "hashtable.h"
 #include <vector>
 
+#define OUTFILE_PREFIX "drmemtrace"
 #define OUTFILE_SUFFIX "raw"
 #define OUTFILE_SUBDIR "raw"
 #define TRACE_SUBDIR "trace"
