@@ -48,7 +48,7 @@ void wrap_pre(void *wrapcxt, OUT void **user_data){
 	if(pid==0){
 		// child process
 		dr_printf("Child Process\n");
-		execl("/home/hyeongjun/workspace/backup/build/myhello","myhello",NULL);
+		execl("~/myhello","myhello",NULL);
 	}
 	else{
 		wait(NULL);
