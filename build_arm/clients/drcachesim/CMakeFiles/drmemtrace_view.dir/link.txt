@@ -1,0 +1,2 @@
+/usr/bin/arm-linux-gnueabihf-ar cq ../lib32/release/libdrmemtrace_view.a  CMakeFiles/drmemtrace_view.dir/tools/view.cpp.o
+/usr/bin/arm-linux-gnueabihf-ranlib ../lib32/release/libdrmemtrace_view.a

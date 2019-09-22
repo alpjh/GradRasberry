@@ -1,0 +1,4 @@
+/usr/bin/arm-linux-gnueabihf-gcc  -fPIC      -mthumb -march=armv7-a  -fno-strict-aliasing -fno-stack-protector -fvisibility=internal  -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2     -DARM_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -Xlinker -z -Xlinker now -fPIC -shared -lgcc -Wl,--hash-style=both   -Wl,--hash-style=both -shared -Wl,-soname,libopcodes.so -o ../bin/libopcodes.so CMakeFiles/opcodes.dir/opcodes.c.o ../../ext/lib32/release/libdrx.so ../../ext/lib32/release/libdrreg.so ../../ext/lib32/release/libdrmgr.so ../../ext/lib32/release/libdrcontainers.a ../../lib32/release/libdynamorio.so 
+/usr/bin/arm-linux-gnueabihf-objcopy --only-keep-debug ../bin/libopcodes.so ../bin/libopcodes.so.debug
+/usr/bin/arm-linux-gnueabihf-objcopy --add-gnu-debuglink=../bin/libopcodes.so.debug ../bin/libopcodes.so
+/usr/bin/arm-linux-gnueabihf-strip -g -x ../bin/libopcodes.so

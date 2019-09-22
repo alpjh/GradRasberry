@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaehyun/dynamorio/clients/drcpusim/optionlist.cpp
+iostream
+-
+options.h
+/home/jaehyun/dynamorio/clients/drcpusim/options.h
+
+/home/jaehyun/dynamorio/clients/drcpusim/options.cpp
+string
+-
+droption.h
+/home/jaehyun/dynamorio/clients/drcpusim/droption.h
+options.h
+/home/jaehyun/dynamorio/clients/drcpusim/options.h
+
+/home/jaehyun/dynamorio/clients/drcpusim/options.h
+string
+-
+droption.h
+/home/jaehyun/dynamorio/clients/drcpusim/droption.h
+
+ext/include/droption.h
+string
+-
+vector
+-
+string.h
+-
+stdlib.h
+-
+sstream
+-
+iomanip
+-
+stdint.h
+-
+

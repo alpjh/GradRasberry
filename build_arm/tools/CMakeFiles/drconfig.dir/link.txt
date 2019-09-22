@@ -1,0 +1,4 @@
+/usr/bin/arm-linux-gnueabihf-gcc  -mthumb -march=armv7-a  -fno-strict-aliasing -fno-stack-protector -fvisibility=internal  -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable      -Wl,--hash-style=both  CMakeFiles/drconfig.dir/drdeploy.c.o  -o ../bin32/drconfig -rdynamic ../lib32/libdrconfiglib.a ../lib32/libdrfrontendlib.a ../lib32/libdrlibc.a 
+/usr/bin/arm-linux-gnueabihf-objcopy --only-keep-debug ../bin32/drconfig ../bin32/drconfig.debug
+/usr/bin/arm-linux-gnueabihf-objcopy --add-gnu-debuglink=../bin32/drconfig.debug ../bin32/drconfig
+/usr/bin/arm-linux-gnueabihf-strip -g -x ../bin32/drconfig

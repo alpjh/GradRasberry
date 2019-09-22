@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaehyun/dynamorio/core/arch/asm_defines.asm
+configure.h
+/home/jaehyun/dynamorio/core/arch/configure.h
+
+/home/jaehyun/dynamorio/core/drlibc/drlibc_arm.asm
+../asm_defines.asm
+/home/jaehyun/dynamorio/core/asm_defines.asm
+
+/home/jaehyun/dynamorio/core/drlibc/drlibc_xarch.asm
+../arch/asm_defines.asm
+/home/jaehyun/dynamorio/core/arch/asm_defines.asm
+
+configure.h
+sys/types.h
+-
+

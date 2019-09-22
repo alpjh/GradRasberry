@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaehyun/dynamorio/clients/drcachesim/common/directory_iterator.cpp
+directory_iterator.h
+/home/jaehyun/dynamorio/clients/drcachesim/common/directory_iterator.h
+utils.h
+/home/jaehyun/dynamorio/clients/drcachesim/common/utils.h
+dr_frontend.h
+/home/jaehyun/dynamorio/clients/drcachesim/common/dr_frontend.h
+
+/home/jaehyun/dynamorio/clients/drcachesim/common/directory_iterator.h
+assert.h
+-
+iterator
+-
+windows.h
+-
+dirent.h
+-
+utils.h
+/home/jaehyun/dynamorio/clients/drcachesim/common/utils.h
+
+/home/jaehyun/dynamorio/clients/drcachesim/common/utils.h
+stdio.h
+-
+iomanip
+-
+sstream
+-
+string
+-
+
+cmake/../include/dr_frontend.h
+unistd.h
+-
+tchar.h
+-
+
