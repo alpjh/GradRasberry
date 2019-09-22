@@ -1,6 +1,6 @@
-//#include "opencv2/objdetect.hpp"
-//#include "opencv2/highgui.hpp"
-//#include "opencv2/imgproc.hpp"
+#include "opencv2/objdetect.hpp"
+#include "opencv2/highgui.hpp"
+#include "opencv2/imgproc.hpp"
 #include <iostream>
 
 //using namespace std;
@@ -21,15 +21,15 @@ static void help()
             "./facedetect --cascade=\"data/haarcascades/haarcascade_frontalface_alt.xml\" --nested-cascade=\"data/haarcascades/haarcascade_eye_tree_eyeglasses.xml\" --scale=1.3\n\n"
             "During execution:\n\tHit any key to quit.\n"
             "\tUsing OpenCV version " << CV_VERSION << "\n" << endl;
-}
-
+}*/
+/*
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip );
-
-string cascadeName;
-string nestedCascadeName;
 */
+//string cascadeName;
+//string nestedCascadeName;
+
 void print_hello(){
     printf("hello\n");
 }
@@ -41,10 +41,15 @@ int main( int argc, const char** argv )
 	printf("Before Call\n");    
 	print_hello();
     printf("After Call\n");
+
+	VideoCapture capture;
+	if (capture.open("udp://127.0.0.1:5000"))
+		printf("success");
+	else
+		pritnf("fail");
+
 }
 /*
-
-
 	printf("[Facedetect.cpp] start detect\n");
     VideoCapture capture;
     Mat frame, image;
@@ -146,7 +151,7 @@ int main( int argc, const char** argv )
 			printf("[For Debuh]\n");*/
             /* assume it is a text file containing the
             list of the image filenames to be processed - one per line */
-          /*  FILE* f = fopen( inputName.c_str(), "rt" );
+/*            FILE* f = fopen( inputName.c_str(), "rt" );
             if( f )
             {
                 char buf[1000+1];
