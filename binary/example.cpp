@@ -11,18 +11,18 @@ void print_hello(){
     printf("hello\n");
 }
 int main(){
-	printf("dodododo");
 	Mat frame;
 
 	printf("Before Call\n");    
 	print_hello();
     printf("After Call\n");
 
-
+	char * myfifo = "/tmp/myfifo";
+	mkfifo(myfifo, 0666);
 	//printf("child");
 	//printf("open start");
 	VideoCapture vid;
-	vid.open("udp://127.0.0.1:5000");
+	vid.open(myfifo);
 	//vid.open("");
 
 	while(!vid.isOpened()){
