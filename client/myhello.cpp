@@ -11,7 +11,7 @@ using namespace cv;
 void video_streaming(){
 	cout << "Start Video Streaming" << endl;
 	char buffer[128];
-	string cmd = string("raspivid -t 0 -n -w 300 -h 300 -o - | nc -u 127.0.0.1 5000");
+	string cmd = string("raspivid -t 0 -n -fps 10 -w 150 -h 150 -o - | nc -u 127.0.0.1 5000");
 	string result = "";
 	FILE* pipe = popen(cmd.c_str(), "r");
 	if(!pipe)

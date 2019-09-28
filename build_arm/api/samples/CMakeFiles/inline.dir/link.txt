@@ -1,4 +1,0 @@
-/usr/bin/arm-linux-gnueabihf-gcc  -fPIC      -mthumb -march=armv7-a  -fno-strict-aliasing -fno-stack-protector -fvisibility=internal  -std=gnu99 -fno-unwind-tables -O3 -g3 -Wall -Werror -Wwrite-strings -Wno-unused-but-set-variable -O2     -DARM_32 -DLINUX -DUSE_VISIBILITY_ATTRIBUTES -fno-stack-protector  -Xlinker -z -Xlinker now -fPIC -shared -lgcc -Wl,--hash-style=both   -Wl,--hash-style=both -shared -Wl,-soname,libinline.so -o ../bin/libinline.so CMakeFiles/inline.dir/inline.c.o ../../ext/lib32/release/libdrmgr.so ../../ext/lib32/release/libdrcontainers.a ../../lib32/release/libdynamorio.so 
-/usr/bin/arm-linux-gnueabihf-objcopy --only-keep-debug ../bin/libinline.so ../bin/libinline.so.debug
-/usr/bin/arm-linux-gnueabihf-objcopy --add-gnu-debuglink=../bin/libinline.so.debug ../bin/libinline.so
-/usr/bin/arm-linux-gnueabihf-strip -g -x ../bin/libinline.so

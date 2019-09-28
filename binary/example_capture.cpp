@@ -5,56 +5,64 @@
 
 using namespace std;
 using namespace cv;
-
+/*
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip );
-
-string cascadeName;
-string nestedCascadeName;
+*/
+//string cascadeName = "/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml";
+ 
+//string nestedCascadeName = "/usr/local/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
 
 int main( int argc, const char** argv )
 {
 	printf("[Facedetect.cpp] start detect\n");
     VideoCapture capture;
+
+	//motion detect
+	Mat frameNew;
+	Mat frameOld;
+	Mat frameDiff;
+	double min = 1.0;
+	double max = 1.0;
+	int sensitivity = 100;
+	int detectionCount = 0;
+
+
     Mat frame, image;
-    string inputName;
-    bool tryflip;
-    CascadeClassifier cascade, nestedCascade;
-    double scale;
-/*    
-cv::CommandLineParser parser(argc, argv,
-        "{help h||}"
-        "{cascade|data/haarcascades/haarcascade_frontalface_alt.xml|}"
-        "{nested-cascade|data/haarcascades/haarcascade_eye_tree_eyeglasses.xml|}"
-        "{scale|1|}{try-flip||}{@filename||}"
-    );
-*/
+    string inputName = "";
+    bool tryflip = false;
+    //CascadeClassifier cascade, nestedCascade;
+    double scale = 1.3;
+
+	//*****************Setting
     //cascadeName = parser.get<string>("cascade");
 	//cascadeName = "/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml";
-	cascadeName = "/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml";
-    //nestedCascadeName = parser.get<string>("nested-cascade");
-    nestedCascadeName = "/usr/local/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
-    scale = 1.3;
+	   //nestedCascadeName = parser.get<string>("nested-cascade");
     if (scale < 1)
         scale = 1;
     //tryflip = parser.has("try-flip");
-    tryflip = false;
     //inputName = parser.get<string>("@filename");
-	inputName = "";
+	//*********Setting
+
     /*if (!parser.check())
     {
         parser.printErrors();
         return 0;
     }*/
+
+	/**************** exception handling
     if (!nestedCascade.load(samples::findFileOrKeep(nestedCascadeName)))
         cerr << "WARNING: Could not load classifier cascade for nested objects" << endl;
     if (!cascade.load(samples::findFile(cascadeName)))
     {
         cerr << "ERROR: Could not load classifier cascade" << endl;
-        help();
         return -1;
     }
+	 exception handling */
+
+
+
     if( inputName.empty() || (isdigit(inputName[0]) && inputName.size() == 1) )
     {
         int camera = inputName.empty() ? 0 : inputName[0] - '0';
@@ -64,91 +72,56 @@ cv::CommandLineParser parser(argc, argv,
             return 1;
         }
     }
-    else if (!inputName.empty())
-    {
-        image = imread(samples::findFileOrKeep(inputName), IMREAD_COLOR);
-        if (image.empty())
-        {
-            if (!capture.open(samples::findFileOrKeep(inputName)))
-            {
-                cout << "Could not read " << inputName << endl;
-                return 1;
-            }
-        }
-    }
-    else
-    {
-        image = imread(samples::findFile("lena.jpg"), IMREAD_COLOR);
-        if (image.empty())
-        {
-            cout << "Couldn't read lena.jpg" << endl;
-            return 1;
-        }
-    }
-
-    if( capture.isOpened() )
+    
+	if( capture.isOpened() )
     {
         cout << "Video capturing has been started ..." << endl;
-
+		
+	capture >> frameOld;
         for(;;)
         {
-            capture >> frame;
-            if( frame.empty() )
-                break;
+			capture >> frameNew;
+			if (frameNew.empty())
+				break;
+			
+			absdiff(frameNew, frameOld, frameDiff);
+			//cvtColor(frameDiff, frameDiff, COLOR_BGR2GRAY);
+			minMaxLoc(frameDiff, &min, &max);
+			
+			if (max > sensitivity)
+			{
+				cout << "MotionDetected Max : " << max << "\n" << endl;			
+				vector<int> compression_params;
+				compression_params.push_back(IMWRITE_PNG_COMPRESSION);
+				compression_params.push_back(3);
+				if (imwrite(format("detection_%03d.png", 
+					detectionCount++), 
+					compression_params))
+					cout << "Image saved." << endl;
+				else
+					cout << "Image not saved." << endl;
+			}
+			
+    		imshow( "result", frameNew);
 
-            Mat frame1 = frame.clone();
-            detectAndDraw( frame1, cascade, nestedCascade, scale, tryflip );
+			frameNew.copyTo(frameOld);
+//            if( frame.empty() )
+//                break;
+
+//            Mat frame1 = frame.clone();
+//            detectAndDraw( frame1, cascade, nestedCascade, scale, tryflip );
 
             char c = (char)waitKey(10);
             if( c == 27 || c == 'q' || c == 'Q' )
                 break;
+		
         }
     }
-    else
-    {
-        cout << "Detecting face(s) in " << inputName << endl;
-        if( !image.empty() )
-        {
-            detectAndDraw( image, cascade, nestedCascade, scale, tryflip );
-            waitKey(0);
-        }
-        else if( !inputName.empty() )
-        {
-			printf("[For Debuh]\n");
-            /* assume it is a text file containing the
-            list of the image filenames to be processed - one per line */
-            FILE* f = fopen( inputName.c_str(), "rt" );
-            if( f )
-            {
-                char buf[1000+1];
-                while( fgets( buf, 1000, f ) )
-                {
-                    int len = (int)strlen(buf);
-                    while( len > 0 && isspace(buf[len-1]) )
-                        len--;
-                    buf[len] = '\0';
-                    cout << "file " << buf << endl;
-                    image = imread( buf, 1 );
-                    if( !image.empty() )
-                    {
-                        detectAndDraw( image, cascade, nestedCascade, scale, tryflip );
-                        char c = (char)waitKey(0);
-                        if( c == 27 || c == 'q' || c == 'Q' )
-                            break;
-                    }
-                    else
-                    {
-                        cerr << "Aw snap, couldn't read image " << buf << endl;
-                    }
-                }
-                fclose(f);
-            }
-        }
-    }
+   
 	printf("End Detect\n");
     return 0;
 }
-
+/* 
 void detectAndDraw( Mat& img, CascadeClassifier& cascade,
                     CascadeClassifier& nestedCascade,
                     double scale, bool tryflip )
@@ -238,3 +211,4 @@ void detectAndDraw( Mat& img, CascadeClassifier& cascade,
     }
     imshow( "result", img );
 }
+*/

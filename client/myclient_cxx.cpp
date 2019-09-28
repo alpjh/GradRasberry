@@ -29,8 +29,10 @@ static void event_exit();
 void wrap_pre(void *wrapcxt, OUT void **user_data);
 void wrap_post(void *wrapcxt, OUT void *user_data);
 
+/*
 void takePicture();
 void video_streaming();
+*/
 void tmp();
 
 static void event_exit(){
@@ -80,47 +82,6 @@ static void module_load_event(void *drcontext, const module_data_t *mod, bool lo
 void tmp(){
 	printf("Sucess replacement\n");
 }
-
-void takePicture(){
-	char buffer[128];
-	string cmd = string("raspistill -o tmp.jpg");
-	string result = "";
-	FILE* pipe = popen(cmd.c_str(), "r");
-	if(!pipe)
-	try{
-		while(fgets(buffer,sizeof buffer, pipe)!=NULL){
-			result += buffer;
-		}
-	}catch(...){
-		pclose(pipe);
-		throw;
-	}
-	pclose(pipe);
-
-	cout << result << endl;
-}
-
-void video_streaming(){
-	cout << "Start Video Streaming" << endl;
-	char buffer[128];
-	string cmd = string("raspivid -t 0 -n -w 300 -h 300 -o - | nc -u 127.0.0.1 5000");
-	string result = "";
-	FILE* pipe = popen(cmd.c_str(), "r");
-	if(!pipe)
-	try{
-		while(fgets(buffer,sizeof buffer, pipe)!=NULL){
-			result += buffer;
-		}
-	}catch(...){
-		pclose(pipe);
-		throw;
-	}
-	pclose(pipe);
-
-	cout << result << endl;
-}
-
-
 DR_EXPORT void
 dr_client_main(client_id_t id, int argc, const char* argv[]){
 	
